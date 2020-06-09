@@ -1,6 +1,12 @@
 import React from "react";
-import { Box } from "grommet";
+import { Box, Text } from "grommet";
 import { INVERSE } from "../constants/colors";
+
+const links = [
+  'Work',
+  'About',
+  'Resume',
+];
 
 const Header = () => {
   return (
@@ -13,12 +19,21 @@ const Header = () => {
       height='xsmall'
       justify='between'
       direction='row'
+      align='center'
     >
-      <Box>
-        Logo
+      <Box
+        margin={{ vertical: 'medium', horizontal: 'large' }}
+      >
+        Michael Plazek
       </Box>
-      <Box>
-        Links
+      <Box
+        margin={{ vertical: 'medium', horizontal: 'large' }}
+        direction='row'
+        gap='medium'
+      >
+        {
+          links.map(item => <Text>{item}</Text>)
+        }
       </Box>
     </Box>
   );
