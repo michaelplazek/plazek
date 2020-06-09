@@ -8,7 +8,7 @@ import get from 'lodash/get';
 import DesktopLogo from "./DesktopLogo";
 import MobileLogo from "./MobileLogo";
 
-import { isSmall } from "../utils";
+import { isActive, isSmall } from "../utils";
 
 const linkStyle = () => ({
   textDecoration: 'none',
@@ -70,6 +70,8 @@ const Header = () => {
                       style={linkStyle()}
                       key={uniqueId()}
                       to={item.path}
+                      getProps={isActive}
+
                     >
                       {item.label}
                     </Link>
