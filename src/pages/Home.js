@@ -7,6 +7,7 @@ import {
 
 import { useStateContext } from "../app/context";
 import { GRADIENT, INVERSE } from "../constants/colors";
+import Fab from "../components/Fab";
 
 const Home = () => {
 
@@ -50,6 +51,7 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
+      <Fab />
     </Box>
   );
 };
