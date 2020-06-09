@@ -4,5 +4,6 @@ export const INVERSE = {
 };
 
 export const GRADIENT = {
-  background: 'linear-gradient(180deg, #FFF 50%, #000 50%)'
+  background: 'linear-gradient(180deg, #FFF 50%, #000 50%)',
+  zIndex: 1,
 };

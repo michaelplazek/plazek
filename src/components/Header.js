@@ -1,11 +1,22 @@
 import React from "react";
+import { Link } from "gatsby"
 import { Box, Text } from "grommet";
+
 import { INVERSE } from "../constants/colors";
 
 const links = [
-  'Work',
-  'About',
-  'Resume',
+  {
+    label: 'Work',
+    path: '/work'
+  },
+  {
+    label: 'About',
+    path: '/about'
+  },
+  {
+    label: 'Resume',
+    path: '/resume'
+  },
 ];
 
 const Header = () => {
@@ -13,7 +24,8 @@ const Header = () => {
     <Box
       style={{
         ...INVERSE,
-        position: 'fixed'
+        position: 'fixed',
+        zIndex: 2
       }}
       fill='horizontal'
       height='xsmall'
@@ -32,7 +44,7 @@ const Header = () => {
         gap='medium'
       >
         {
-          links.map(item => <Text>{item}</Text>)
+          links.map(item => <Link to={item.path}>{item.label}</Link>)
         }
       </Box>
     </Box>
