@@ -6,7 +6,7 @@ import {
 } from "grommet";
 
 import { useStateContext } from "../app/context";
-import { INVERSE } from "../constants/colors";
+import { GRADIENT, INVERSE } from "../constants/colors";
 
 const Home = () => {
 
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <Box
       fill='vertical'
-      style={{ background: 'linear-gradient(90deg, #FFF 50%, #000 50%)' }}
+      style={size !== 'small' ? GRADIENT : undefined}
     >
       <Box
         fill='vertical'
@@ -26,11 +26,28 @@ const Home = () => {
       >
         <Box
           align='center'
+          direction='row'
+          gap='large'
         >
+          <Box>
           <Heading margin='none' size='xlarge'>
             UI / UX
           </Heading>
-          <Heading level={2}>DEVELOPER</Heading>
+          <Heading margin='none' size='xlarge'>
+            UI / UX
+          </Heading>
+          <Heading margin='none' size='xlarge'>
+            UI / UX
+          </Heading>
+          </Box>
+          <Box
+            style={{
+              position: 'relative',
+              top: '1.55em'
+            }}
+          >
+            <Heading level={2}>DEVELOPER</Heading>
+          </Box>
         </Box>
       </Box>
     </Box>
