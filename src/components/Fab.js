@@ -32,7 +32,9 @@ const Fab = ({
         style={fabStyle(size, hovered)}
         onClick={onClick}
         onMouseOver={() => setHovered(true)}
+        onFocus={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
+        onBlur={() => setHovered(false)}
         align='center'
         justify='center'
       >

@@ -1,4 +1,4 @@
-import { state as appState, reducer as appReducer } from "./app";
+import { state as appState, reducer as appReducer } from "./application";
 
 export const initialState = {
   app: { ...appState },
