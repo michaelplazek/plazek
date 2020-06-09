@@ -1,14 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
 
-import SEO from "../components/seo";
-import App from "../app/App";
+import Home from "./Home";
+import { withApp } from "../HOCs";
 
-const IndexPage = () => (
-  <App>
-    <SEO title="Home" />
-      <h1>Hello Sweet World</h1>
-  </App>
-);
+const IndexPage = () => <Home />;
 
-export default IndexPage;
+export default withApp(IndexPage);
