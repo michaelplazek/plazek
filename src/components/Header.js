@@ -35,8 +35,6 @@ const Header = () => {
 
   const links = get(data, 'site.siteMetadata.links');
 
-  console.log(data);
-
   return (
     <Box
       style={{
