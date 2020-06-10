@@ -63,10 +63,9 @@ const Header = () => {
             >
               {
                 links.map(item => (
-                  <Text>
+                  <Text key={uniqueId()}>
                     <Link
                       style={linkStyle()}
-                      key={uniqueId()}
                       to={item.path}
                       getProps={isActive}
 
@@ -86,6 +85,7 @@ const Header = () => {
                 items={
                   links.map(link => ({
                     ...link,
+                    key: uniqueId(),
                     label: <Box margin={{ horizontal: 'medium', vertical: 'small' }}><Text>{link.label}</Text></Box>,
                     onClick: () => navigate(link.path)
                   }))
