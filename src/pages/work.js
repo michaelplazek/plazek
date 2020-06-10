@@ -108,7 +108,6 @@ const Work = () => {
   `);
 
   const repos = getRepositories(data);
-  console.log(repos);
 
   return (
     <PageContainer>

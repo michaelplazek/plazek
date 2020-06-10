@@ -31,8 +31,6 @@ const Header = () => {
     }
   `);
 
-
-
   const links = get(data, 'site.siteMetadata.links');
 
   return (
@@ -44,6 +42,7 @@ const Header = () => {
       fill='horizontal'
       height='xsmall'
       justify='between'
+      background='white'
       direction='row'
       align='center'
     >

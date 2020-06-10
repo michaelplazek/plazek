@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { Anchor, Box, Heading, Text } from "grommet";
-import { navigate } from 'gatsby';
-import { DiCode as Code, DiGithubBadge as Github } from "react-icons/di";
+import { Box, Heading, Text } from "grommet";
+
+import uniqueId from 'lodash/uniqueId';
+
+import {
+  DiCode as Code,
+  DiGithubBadge as Github,
+} from "react-icons/di";
 
 const WorkWidget = ({
   repo
@@ -16,8 +21,6 @@ const WorkWidget = ({
     languages,
     website,
   } = repo;
-
-  console.log(languages);
 
   const [hovered, setHovered] = useState(false);
 
@@ -38,18 +41,16 @@ const WorkWidget = ({
     >
       <Box align='center' justify='center'>
         <Heading color='black' margin='none' level={2} size='xlarge'>{symbol}</Heading>
+        <Text size='xsmall'>{name}</Text>
         <Box direction='row' gap='small' margin='small'>
           {
-            languages.map(language => language.icons ? language.icons.map(icon => React.createElement(icon, { color: '#333' })) : <Code color='black'/>)
+            languages.map(language =>
+              language.icons ? language.icons.map(
+                icon => React.createElement(icon, { color: '#333', key: uniqueId() })
+              ) : <Code key={uniqueId()} color='black'/>)
           }
         </Box>
       </Box>
-      {/*<Box margin={{ horizontal: 'small', top: 'small' }} align='center'>*/}
-        {/*<Anchor icon={<Github />} href={url} size='small' label={name} />*/}
-      {/*</Box>*/}
-      {/*<Box>*/}
-
-      {/*</Box>*/}
     </Box>
   );
 };
