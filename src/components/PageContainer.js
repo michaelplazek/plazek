@@ -1,15 +1,12 @@
 import React from "react";
 import { Box } from "grommet";
-import mountains from '../images/mountains.png';
 
-const PageContainer = ({ children }) => {
-
-  console.log(mountains);
+const PageContainer = ({ children, background }) => {
 
   return (
     <Box
       fill={true}
-      background={{ image: `url(${mountains})` }}
+      background={background}
       pad={{ horizontal: 'medium' }}
     >
       <Box

@@ -1,6 +1,15 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
+import { Grid } from "grommet";
+import {
+  DiJavascript1 as JS,
+  DiReact as ReactJs,
+  DiHtml5 as Html5,
+  DiCss3Full as Css3,
+  DiJava as Java
+} from 'react-icons/di'
+
 import find from 'lodash/find';
 import uniqueId from 'lodash/uniqueId';
 
@@ -12,15 +21,7 @@ import filter from 'lodash/fp/filter';
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
 import WorkWidget from "../components/WorkWidget";
-
-import { Grid } from "grommet";
-import {
-  DiJavascript1 as JS,
-  DiReact as ReactJs,
-  DiHtml5 as Html5,
-  DiCss3Full as Css3,
-  DiJava as Java
-} from 'react-icons/di'
+import mountains from '../images/mountains.png';
 
 const iconMap = {
   javascript: [JS, ReactJs],
@@ -110,10 +111,9 @@ const Work = () => {
   const repos = getRepositories(data);
 
   return (
-    <PageContainer>
+    <PageContainer background={`url(${mountains})`}>
       <Grid
         gap='medium'
-        // rows='small'
         columns='small'
       >
         {repos.map(repo => <WorkWidget key={uniqueId()} repo={repo} />)}
