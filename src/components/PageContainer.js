@@ -12,7 +12,12 @@ const PageContainer = ({ children }) => {
       background={{ image: `url(${mountains})` }}
       pad={{ horizontal: 'medium' }}
     >
-      {children}
+      <Box
+        style={{ transform: 'translateY(100px)' }}
+        margin={{ horizontal: 'medium', bottom: 'medium' }}
+      >
+        {children}
+      </Box>
     </Box>
   );
 };

@@ -112,9 +112,6 @@ const Work = () => {
   return (
     <PageContainer>
       <Grid
-        style={{
-          transform: 'translateY(100px)',
-        }}
         gap='medium'
         // rows='small'
         columns='small'

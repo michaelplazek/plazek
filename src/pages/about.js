@@ -1,11 +1,12 @@
 import React from "react";
 import { withApp } from "../HOCs";
+import PageContainer from "../components/PageContainer";
 
 const About = () => {
   return (
-    <div style={{ transform: 'translateY(100px)' }} >
-      About me
-    </div>
+    <PageContainer>
+      About
+    </PageContainer>
   );
 };
 
