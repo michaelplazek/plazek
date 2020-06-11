@@ -9,6 +9,7 @@ import {
 import { GRADIENT, INVERSE } from "../constants/colors";
 import Fab from "../components/Fab";
 import { isSmall } from "../utils";
+import TerminalWrapper from "../components/TerminalWrapper";
 
 const Home = () => {
 
@@ -58,6 +59,7 @@ const Home = () => {
         </Box>
       </Box>
       <Fab />
+      <TerminalWrapper />
     </Box>
   );
 };
