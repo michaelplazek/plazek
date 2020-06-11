@@ -2,6 +2,7 @@ import React, { useContext, Fragment } from "react";
 import { Link, useStaticQuery, graphql, navigate } from "gatsby"
 import { Box, Menu, ResponsiveContext, Text } from "grommet";
 import { Menu as MenuIcon } from "grommet-icons";
+
 import uniqueId from 'lodash/uniqueId';
 import get from 'lodash/get';
 
@@ -9,6 +10,7 @@ import DesktopLogo from "./DesktopLogo";
 import MobileLogo from "./MobileLogo";
 
 import { isActive, isSmall } from "../utils";
+import resume from '../images/plazek_resume.pdf';
 
 const linkStyle = () => ({
   textDecoration: 'none',
@@ -74,6 +76,7 @@ const Header = () => {
                   </Text>
                 ))
               }
+              <a style={linkStyle()} href={resume} download={true}>Resume</a>
             </Box>
           </Fragment>
         ) : (
@@ -87,7 +90,15 @@ const Header = () => {
                     key: uniqueId(),
                     label: <Box margin={{ horizontal: 'medium', vertical: 'small' }}><Text>{link.label}</Text></Box>,
                     onClick: () => navigate(link.path)
-                  }))
+                  })).concat({
+                    key: uniqueId(),
+                    label: (
+                      <Box margin={{ horizontal: 'medium', vertical: 'small' }}>
+                        <a style={linkStyle()} href={resume} download={true}>
+                          Resume
+                        </a>
+                      </Box>)
+                  })
                 }
                 size='large'
               />
