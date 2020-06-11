@@ -196,6 +196,7 @@ const About = () => {
       <Grid
         columns='medium'
       >
+        { /* TODO: create a component for these fellas */}
         <Box>
           <Heading level={2}>Things I <b>use</b></Heading>
           <Box
