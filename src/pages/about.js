@@ -15,6 +15,7 @@ import {
 } from 'react-icons/gr';
 import {
   FaJava as JavaIcon,
+  FaNodeJs as NodeIcon,
 } from 'react-icons/fa';
 import {
   GrGrommet as GrommetIcon,
@@ -28,6 +29,8 @@ import WebpackIcon from "../svgs/icons/Webpack";
 import GolangIcon from "../svgs/icons/Golang";
 import KubernetesIcon from "../svgs/icons/Kubernetes";
 import BabelIcon from "../svgs/icons/Babel";
+import TerraformIcon from "../svgs/icons/Terraform";
+import LambdaIcon from "../svgs/icons/Lambda";
 
 const getImageStyle = size => {
   switch(size) {
@@ -80,6 +83,18 @@ const use = [
   {
     name: 'Babel',
     icon: BabelIcon
+  },
+  {
+    name: 'Node',
+    icon: NodeIcon
+  },
+  {
+    name: 'Terraform',
+    icon: TerraformIcon
+  },
+  {
+    name: 'Serverless',
+    icon: LambdaIcon
   },
 ];
 
