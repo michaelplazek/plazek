@@ -16,10 +16,14 @@ import {
 import {
   FaJava as JavaIcon,
   FaNodeJs as NodeIcon,
+  FaDocker as DockerIcon
 } from 'react-icons/fa';
 import {
   GrGrommet as GrommetIcon,
-} from 'react-icons/gr'
+} from 'react-icons/gr';
+import {
+  FiFigma as FigmaIcon,
+} from 'react-icons/fi';
 
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
@@ -31,6 +35,8 @@ import KubernetesIcon from "../svgs/icons/Kubernetes";
 import BabelIcon from "../svgs/icons/Babel";
 import TerraformIcon from "../svgs/icons/Terraform";
 import LambdaIcon from "../svgs/icons/Lambda";
+import NetlifyIcon from "../svgs/icons/Netlify";
+import FramerIcon from "../svgs/icons/Framer";
 
 const getImageStyle = size => {
   switch(size) {
@@ -96,6 +102,10 @@ const use = [
     name: 'Serverless',
     icon: LambdaIcon
   },
+  {
+    name: 'Netlify',
+    icon: NetlifyIcon
+  },
 ];
 
 const know = [
@@ -111,10 +121,21 @@ const know = [
     name: 'Kubernetes',
     icon: KubernetesIcon
   },
+  {
+    name: 'Docker',
+    icon: DockerIcon
+  },
+  {
+    name: 'Figma',
+    icon: FigmaIcon
+  },
 ];
 
 const play = [
-
+  {
+    name: 'Framer',
+    icon: FramerIcon
+  },
 ];
 
 const About = () => {
