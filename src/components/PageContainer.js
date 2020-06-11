@@ -5,7 +5,6 @@ const PageContainer = ({ children, background }) => {
 
   return (
     <Box
-      // fill={true}
       background={background}
       pad={{ horizontal: 'medium' }}
     >

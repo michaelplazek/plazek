@@ -7,7 +7,8 @@ import {
   DiAws as AwsIcon,
   DiCss3Full as CssIcon,
   DiPython as PythonIcon,
-  DiAngularSimple as AngularIcon
+  DiAngularSimple as AngularIcon,
+  DiJqueryLogo as JQueryIcon
 } from 'react-icons/di';
 import {
   RiGatsbyLine as GatsbyIcon,
@@ -40,6 +41,7 @@ import TerraformIcon from "../svgs/icons/Terraform";
 import LambdaIcon from "../svgs/icons/Lambda";
 import NetlifyIcon from "../svgs/icons/Netlify";
 import FramerIcon from "../svgs/icons/Framer";
+import TypescriptIcon from "../svgs/icons/Typescript";
 
 const getImageStyle = size => {
   switch(size) {
@@ -132,6 +134,10 @@ const know = [
     name: 'Figma',
     icon: FigmaIcon
   },
+  {
+    name: 'JQuery',
+    icon: JQueryIcon
+  },
 ];
 
 const play = [
@@ -150,6 +156,10 @@ const play = [
   {
     name: 'Vue',
     icon: VueIcon
+  },
+  {
+    name: 'TypeScript',
+    icon: TypescriptIcon
   },
 ];
 

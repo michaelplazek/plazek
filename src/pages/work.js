@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Grid } from "grommet";
+import { Box, Grid } from "grommet";
 import {
   DiJavascript1 as JS,
   DiReact as ReactJs,
@@ -21,7 +21,6 @@ import filter from 'lodash/fp/filter';
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
 import WorkWidget from "../components/WorkWidget";
-import mountains from '../images/mountains.png';
 
 const iconMap = {
   javascript: [JS, ReactJs],
@@ -111,13 +110,17 @@ const Work = () => {
   const repos = getRepositories(data);
 
   return (
-    <PageContainer background={`url(${mountains})`}>
-      <Grid
-        gap='medium'
-        columns='small'
+    <PageContainer>
+      <Box
+        fill={true}
       >
-        {repos.map(repo => <WorkWidget key={uniqueId()} repo={repo} />)}
-      </Grid>
+        <Grid
+          gap='medium'
+          columns='small'
+        >
+          {repos.map(repo => <WorkWidget key={uniqueId()} repo={repo} />)}
+        </Grid>
+      </Box>
     </PageContainer>
   );
 };
