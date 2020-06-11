@@ -36,6 +36,7 @@ const theme = {
           "full": "100%"
         }
       },
+      "medium-small": { "value": 900 },
       "medium": {"value": 1536},
       "large": {}
     }
