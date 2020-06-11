@@ -6,16 +6,19 @@ import {
   DiJavascript1 as JsIcon,
   DiAws as AwsIcon,
   DiCss3Full as CssIcon
-} from 'react-icons/di'
+} from 'react-icons/di';
 import {
   RiGatsbyLine as GatsbyIcon,
-} from 'react-icons/ri'
+} from 'react-icons/ri';
 import {
   GrGraphQl as GraphQlIcon,
-} from 'react-icons/gr'
+} from 'react-icons/gr';
 import {
   FaJava as JavaIcon,
-} from 'react-icons/fa'
+} from 'react-icons/fa';
+import {
+  GrGrommet as GrommetIcon,
+} from 'react-icons/gr'
 
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
@@ -23,6 +26,8 @@ import face from '../images/face.jpg';
 import ReduxIcon from "../svgs/icons/Redux";
 import WebpackIcon from "../svgs/icons/Webpack";
 import GolangIcon from "../svgs/icons/Golang";
+import KubernetesIcon from "../svgs/icons/Kubernetes";
+import BabelIcon from "../svgs/icons/Babel";
 
 const getImageStyle = size => {
   switch(size) {
@@ -53,6 +58,10 @@ const use = [
     icon: JsIcon
   },
   {
+    name: 'Grommet',
+    icon: GrommetIcon
+  },
+  {
     name: 'AWS',
     icon: AwsIcon
   },
@@ -68,6 +77,10 @@ const use = [
     name: 'CSS',
     icon: CssIcon
   },
+  {
+    name: 'Babel',
+    icon: BabelIcon
+  },
 ];
 
 const know = [
@@ -78,6 +91,10 @@ const know = [
   {
     name: 'Go',
     icon: GolangIcon
+  },
+  {
+    name: 'Kubernetes',
+    icon: KubernetesIcon
   },
 ];
 
