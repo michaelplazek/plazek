@@ -5,7 +5,9 @@ import {
   DiReact as ReactIcon,
   DiJavascript1 as JsIcon,
   DiAws as AwsIcon,
-  DiCss3Full as CssIcon
+  DiCss3Full as CssIcon,
+  DiPython as PythonIcon,
+  DiAngularSimple as AngularIcon
 } from 'react-icons/di';
 import {
   RiGatsbyLine as GatsbyIcon,
@@ -16,7 +18,8 @@ import {
 import {
   FaJava as JavaIcon,
   FaNodeJs as NodeIcon,
-  FaDocker as DockerIcon
+  FaDocker as DockerIcon,
+  FaVuejs as VueIcon
 } from 'react-icons/fa';
 import {
   GrGrommet as GrommetIcon,
@@ -133,8 +136,20 @@ const know = [
 
 const play = [
   {
-    name: 'Framer',
+    name: 'FramerX',
     icon: FramerIcon
+  },
+  {
+    name: 'Python',
+    icon: PythonIcon
+  },
+  {
+    name: 'Angular',
+    icon: AngularIcon
+  },
+  {
+    name: 'Vue',
+    icon: VueIcon
   },
 ];
 
@@ -169,7 +184,6 @@ const About = () => {
         </Box>
       </Box>
       <Grid
-        // rows='medium'
         columns='medium'
       >
         <Box>
@@ -192,7 +206,6 @@ const About = () => {
           <Heading level={2}>Things I <b>know</b></Heading>
           <Box
             wrap={true}
-            height='small'
           >
             {
               know.map(({ name, icon }) => (
@@ -208,7 +221,6 @@ const About = () => {
           <Heading level={2}>Things I've <b>played with</b></Heading>
           <Box
             wrap={true}
-            height='small'
           >
             {
               play.map(({ name, icon }) => (
