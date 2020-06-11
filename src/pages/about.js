@@ -50,7 +50,9 @@ const getImageStyle = size => {
     case "medium-small":
       return { width: '100px', height: '100px' };
     case "medium":
-      return { width: '150px', height: '150px' }
+      return { width: '150px', height: '150px' };
+    case "large":
+      return { width: '150px', height: '150px' };
   }
 };
 
@@ -195,6 +197,7 @@ const About = () => {
       </Box>
       <Grid
         columns='medium'
+        gap='medium'
       >
         { /* TODO: create a component for these fellas */}
         <Box>
@@ -202,6 +205,7 @@ const About = () => {
           <Box
             wrap={true}
             height='small'
+            gap='small'
           >
             {
               use.map(({ name, icon }) => (
@@ -217,6 +221,8 @@ const About = () => {
           <Heading level={2}>Things I <b>know</b></Heading>
           <Box
             wrap={true}
+            height='small'
+            gap='small'
           >
             {
               know.map(({ name, icon }) => (
@@ -232,6 +238,7 @@ const About = () => {
           <Heading level={2}>Things I've <b>played with</b></Heading>
           <Box
             wrap={true}
+            gap='small'
           >
             {
               play.map(({ name, icon }) => (
