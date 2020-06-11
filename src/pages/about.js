@@ -197,7 +197,7 @@ const About = () => {
       </Box>
       <Grid
         columns='medium'
-        gap='medium'
+        gap={size === 'small' || size === 'medium-small' ? undefined : 'medium'}
       >
         { /* TODO: create a component for these fellas */}
         <Box>
