@@ -1,6 +1,6 @@
 .terminal-base {
     height: 50vh !important;
-    min-height: 50vh !important;
+    min-height: 0vh !important;
     max-width: 2000px !important;
 }
 

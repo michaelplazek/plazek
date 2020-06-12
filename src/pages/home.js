@@ -12,7 +12,7 @@ import Fab from "../components/Fab";
 import { isSmall } from "../utils";
 import TerminalWrapper from "../components/TerminalWrapper";
 
-const Transition = posed.div({
+const AppearTransition = posed.div({
   visible: { opacity: 1, transition: { duration: 1000 } },
   hidden: { opacity: 0, transition: { duration: 1000 } },
 });
@@ -39,14 +39,14 @@ const Home = () => {
           direction={!isSmall(size) ? 'row' : 'column'}
           gap={!isSmall(size) ? 'large' : 'none'}
         >
-          <Box>
+          <Box animation='slideUp'>
             {
               size !== 'small' && (
-                <Transition pose={!hasTerminal ? 'visible' : 'hidden'}>
+                <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
                   <Heading margin='none' size='xlarge'>
                     UI / UX
                   </Heading>
-                </Transition>
+                </AppearTransition>
               )
             }
             <Heading margin='none' size='xlarge'>
@@ -54,11 +54,11 @@ const Home = () => {
             </Heading>
             {
               size !== 'small' && (
-                <Transition pose={!hasTerminal ? 'visible' : 'hidden'}>
+                <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
                   <Heading margin='none' size='xlarge'>
                     UI / UX
                   </Heading>
-                </Transition>
+                </AppearTransition>
               )
             }
           </Box>
@@ -74,17 +74,22 @@ const Home = () => {
       </Box>
       <Fab onClick={() => setTerminal(!hasTerminal)} />
       {hasTerminal && (
-        <Box
-          fill='horizontal'
-          style={{
-            position: 'absolute',
-            bottom: '0px',
-            height: '50vh',
-            width: '100vw'
-          }}
-        >
-          <TerminalWrapper setTerminal={setTerminal} />
-        </Box>
+          <Box
+            animation={{
+              "type": "slideUp",
+              "delay": 0,
+              "duration": 1000,
+              "size": "large"
+            }}
+            fill='horizontal'
+            style={{
+              position: 'absolute',
+              bottom: '0px',
+              width: '100vw',
+            }}
+          >
+            <TerminalWrapper setTerminal={setTerminal} />
+          </Box>
       )}
     </Box>
   );
