@@ -16,7 +16,10 @@ import {
   DiCss3Full as CssIcon,
   DiPython as PythonIcon,
   DiAngularSimple as AngularIcon,
-  DiJqueryLogo as JQueryIcon
+  DiJqueryLogo as JQueryIcon,
+  DiGulp as GulpIcon,
+  DiUnitySmall as UnityIcon,
+  DiSass as SassIcon
 } from 'react-icons/di';
 import {
   RiGatsbyLine as GatsbyIcon,
@@ -121,6 +124,10 @@ export const know = [
     name: 'JQuery',
     icon: JQueryIcon
   },
+  {
+    name: 'Gulp',
+    icon: GulpIcon
+  },
 ];
 
 export const play = [
@@ -143,5 +150,13 @@ export const play = [
   {
     name: 'TypeScript',
     icon: TypescriptIcon
+  },
+  {
+    name: 'Unity',
+    icon: UnityIcon
+  },
+  {
+    name: 'Sass',
+    icon: SassIcon
   },
 ];

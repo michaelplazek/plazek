@@ -47,7 +47,7 @@ const About = () => {
           <Heading level={2}>Things I <b>use</b></Heading>
           <Box
             wrap={true}
-            height='small'
+            style={{ height: '256px' }}
             gap='small'
           >
             {
@@ -64,7 +64,7 @@ const About = () => {
           <Heading level={2}>Things I <b>know</b></Heading>
           <Box
             wrap={true}
-            height='small'
+            style={{ height: '256px' }}
             gap='small'
           >
             {
@@ -82,6 +82,7 @@ const About = () => {
           <Box
             wrap={true}
             gap='small'
+
           >
             {
               play.map(({ name, icon }) => (

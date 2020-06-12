@@ -43,4 +43,6 @@ const theme = {
   },
 };
 
+console.log(grommet);
+
 export default merge(theme, grommet)

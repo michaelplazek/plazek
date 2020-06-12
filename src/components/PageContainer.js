@@ -11,6 +11,7 @@ const PageContainer = ({ children, background }) => {
       <Box
         style={{ transform: 'translateY(100px)' }}
         margin={{ horizontal: 'medium', bottom: 'medium' }}
+        overflow='hidden'
       >
         {children}
       </Box>
