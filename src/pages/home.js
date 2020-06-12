@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from "react";
+import React, { useContext, Fragment, useState } from "react";
 
 import {
   ResponsiveContext,
@@ -14,6 +14,7 @@ import TerminalWrapper from "../components/TerminalWrapper";
 const Home = () => {
 
   const size = useContext(ResponsiveContext);
+  const [hasTerminal, setTerminal] = useState(false);
 
   return (
     <Box
@@ -36,7 +37,7 @@ const Home = () => {
             UI / UX
           </Heading>
           {
-            size !== 'small' && (
+            size !== 'small' && !hasTerminal && (
               <Fragment>
                 <Heading margin='none' size='xlarge'>
                   UI / UX
@@ -51,15 +52,27 @@ const Home = () => {
           <Box
             style={{
               position: 'relative',
-              top: !isSmall(size) ? '1.55em' : 0
+              top: !isSmall(size) && !hasTerminal ? '1.55em' : 0
             }}
           >
             <Heading margin='none' level={2}>DEVELOPER</Heading>
           </Box>
         </Box>
       </Box>
-      <Fab />
-      <TerminalWrapper />
+      <Fab onClick={() => setTerminal(!hasTerminal)} />
+      {hasTerminal && (
+        <Box
+          fill='horizontal'
+          style={{
+            position: 'absolute',
+            bottom: '0px',
+            height: '50vh',
+            width: '100vw'
+          }}
+        >
+          <TerminalWrapper />
+        </Box>
+      )}
     </Box>
   );
 };
