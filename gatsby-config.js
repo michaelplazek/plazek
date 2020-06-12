@@ -4,6 +4,11 @@ module.exports = {
     description: `The portfolio of Michael Plazek`,
     author: `@michaelplazek`,
     links: [
+
+      {
+        path: '/',
+        label: 'Home',
+      },
       {
         path: '/work',
         label: 'Work',
@@ -11,7 +16,7 @@ module.exports = {
       {
         path: '/about',
         label: 'About',
-      }
+      },
     ],
   },
   plugins: [
