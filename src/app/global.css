@@ -6,4 +6,5 @@
 
 .terminal-base > div > div {
     max-width: 2000px !important;
+    overflow-x: hidden !important;
 }

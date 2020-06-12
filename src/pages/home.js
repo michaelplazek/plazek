@@ -75,12 +75,6 @@ const Home = () => {
       <Fab onClick={() => setTerminal(!hasTerminal)} />
       {hasTerminal && (
           <Box
-            animation={{
-              "type": "slideUp",
-              "delay": 0,
-              "duration": 1000,
-              "size": "large"
-            }}
             fill='horizontal'
             style={{
               position: 'absolute',
