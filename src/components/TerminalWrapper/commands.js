@@ -22,7 +22,7 @@ const downloadCommand = (args, print) => {
   }
 };
 
-export const commands = {
+export const commands = setTerminal => ({
   download: {
     method: downloadCommand,
     options: [{
@@ -30,8 +30,16 @@ export const commands = {
       description: 'The current resume of Michael Plazek',
     }]
   },
-};
+  exit: {
+    method: (_, print) => {
+      print('Have a nice day!');
+      setTimeout(() => setTerminal(false), 500);
+    },
+    options: []
+  }
+});
 
 export const descriptions = {
-  download: 'Download a static file from the build. Options include [--resume]'
+  download: 'Download a static file from the build. Options include [--resume]',
+  exit: 'Exit the terminal experience.'
 };

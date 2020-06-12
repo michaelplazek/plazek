@@ -3,7 +3,9 @@ import Terminal from 'terminal-in-react';
 
 import { commands, descriptions } from './commands';
 
-const TerminalWrapper = () => {
+const TerminalWrapper = ({
+  setTerminal
+}) => {
   return (
     <Terminal
       color='white'
@@ -14,7 +16,7 @@ const TerminalWrapper = () => {
       hideTopBar={true}
       allowTabs={false}
       style={{ fontSize: "1em" }}
-      commands={commands}
+      commands={commands(setTerminal)}
       descriptions={descriptions}
       msg="Welcome to the terminal. Type 'help' for list of commands."
     />

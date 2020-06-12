@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Box, Grid, Heading, ResponsiveContext, Text } from "grommet";
+import uniqueId from 'lodash/uniqueId';
 
 import {
   DiReact as ReactIcon,
@@ -209,7 +210,7 @@ const About = () => {
           >
             {
               use.map(({ name, icon }) => (
-                <Box direction='row' gap='small' align='center'>
+                <Box key={uniqueId()} direction='row' gap='small' align='center'>
                   {React.createElement(icon, { color: 'black' })}
                   <Text>{name}</Text>
                 </Box>
@@ -226,7 +227,7 @@ const About = () => {
           >
             {
               know.map(({ name, icon }) => (
-                <Box direction='row' gap='small' align='center'>
+                <Box key={uniqueId()} direction='row' gap='small' align='center'>
                   {React.createElement(icon, { color: 'black' })}
                   <Text>{name}</Text>
                 </Box>
@@ -242,7 +243,7 @@ const About = () => {
           >
             {
               play.map(({ name, icon }) => (
-                <Box direction='row' gap='small' align='center'>
+                <Box key={uniqueId()} direction='row' gap='small' align='center'>
                   {React.createElement(icon, { color: 'black' })}
                   <Text>{name}</Text>
                 </Box>

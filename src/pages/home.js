@@ -29,25 +29,26 @@ const Home = () => {
       >
         <Box
           align='center'
+          style={hasTerminal ? { position: 'relative', bottom: '20vh' } : {}}
           direction={!isSmall(size) ? 'row' : 'column'}
           gap={!isSmall(size) ? 'large' : 'none'}
         >
           <Box>
-          <Heading margin='none' size='xlarge'>
-            UI / UX
-          </Heading>
-          {
-            size !== 'small' && !hasTerminal && (
-              <Fragment>
-                <Heading margin='none' size='xlarge'>
-                  UI / UX
-                </Heading>
-                <Heading margin='none' size='xlarge'>
-                  UI / UX
-                </Heading>
-              </Fragment>
-            )
-          }
+            <Heading margin='none' size='xlarge'>
+              UI / UX
+            </Heading>
+            {
+              size !== 'small' && !hasTerminal && (
+                <Fragment>
+                  <Heading margin='none' size='xlarge'>
+                    UI / UX
+                  </Heading>
+                  <Heading margin='none' size='xlarge'>
+                    UI / UX
+                  </Heading>
+                </Fragment>
+              )
+            }
           </Box>
           <Box
             style={{
@@ -70,7 +71,7 @@ const Home = () => {
             width: '100vw'
           }}
         >
-          <TerminalWrapper />
+          <TerminalWrapper setTerminal={setTerminal} />
         </Box>
       )}
     </Box>
