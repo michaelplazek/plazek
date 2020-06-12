@@ -8,6 +8,7 @@ import GolangIcon from "../svgs/icons/Golang";
 import KubernetesIcon from "../svgs/icons/Kubernetes";
 import FramerIcon from "../svgs/icons/Framer";
 import TypescriptIcon from "../svgs/icons/Typescript";
+import MaterialUiIcon from "../svgs/icons/MaterialUI";
 
 import {
   DiReact as ReactIcon,
@@ -127,6 +128,10 @@ export const know = [
   {
     name: 'Gulp',
     icon: GulpIcon
+  },
+  {
+    name: 'MaterialUI',
+    icon: MaterialUiIcon
   },
 ];
 
