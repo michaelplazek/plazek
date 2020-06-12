@@ -1,4 +1,5 @@
 import React, { useContext, Fragment, useState } from "react";
+import posed from 'react-pose';
 
 import {
   ResponsiveContext,
@@ -10,6 +11,11 @@ import { GRADIENT, INVERSE } from "../constants/colors";
 import Fab from "../components/Fab";
 import { isSmall } from "../utils";
 import TerminalWrapper from "../components/TerminalWrapper";
+
+const Transition = posed.div({
+  visible: { opacity: 1, transition: { duration: 1000 } },
+  hidden: { opacity: 0, transition: { duration: 1000 } },
+});
 
 const Home = () => {
 
@@ -34,19 +40,25 @@ const Home = () => {
           gap={!isSmall(size) ? 'large' : 'none'}
         >
           <Box>
+            {
+              size !== 'small' && (
+                <Transition pose={!hasTerminal ? 'visible' : 'hidden'}>
+                  <Heading margin='none' size='xlarge'>
+                    UI / UX
+                  </Heading>
+                </Transition>
+              )
+            }
             <Heading margin='none' size='xlarge'>
               UI / UX
             </Heading>
             {
-              size !== 'small' && !hasTerminal && (
-                <Fragment>
+              size !== 'small' && (
+                <Transition pose={!hasTerminal ? 'visible' : 'hidden'}>
                   <Heading margin='none' size='xlarge'>
                     UI / UX
                   </Heading>
-                  <Heading margin='none' size='xlarge'>
-                    UI / UX
-                  </Heading>
-                </Fragment>
+                </Transition>
               )
             }
           </Box>
