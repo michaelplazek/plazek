@@ -40,6 +40,6 @@ export const commands = setTerminal => ({
 });
 
 export const descriptions = {
-  download: 'Download a static file from the build. Options include [--resume]',
-  exit: 'Exit the terminal experience.'
+  download: 'download a static file from the build. Options include [--resume]',
+  exit: 'exit the terminal experience'
 };
