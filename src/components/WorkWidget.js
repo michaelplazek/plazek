@@ -12,9 +12,9 @@ const WorkWidget = ({
   const {
     name,
     url,
-    updatedAt,
-    createdAt,
-    symbol,
+    // updatedAt,
+    // createdAt,
+    // symbol,
     languages,
     site,
     icon,
@@ -28,8 +28,7 @@ const WorkWidget = ({
       round='small'
       elevation={hovered ? 'medium' : 'small'}
       background='light-1'
-      // border={{ color: 'black', size: 'xsmall' }}
-      pad={{ horizontal: 'medium', vertical: 'small' }}
+      pad='medium'
       fill='vertical'
       onMouseOver={() => setHovered(true)}
       onFocus={() => setHovered(true)}
