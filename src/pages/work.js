@@ -2,13 +2,20 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import { Box, Grid } from "grommet";
+
 import {
   DiJavascript1 as JS,
   DiReact as ReactJs,
   DiHtml5 as Html5,
   DiCss3Full as Css3,
-  DiJava as Java
+  DiJava as Java,
+  DiNpm as NpmIcon,
+  DiGithubBadge as GithubIcon,
 } from 'react-icons/di'
+
+import {
+  FiExternalLink as LinkIcon,
+} from 'react-icons/fi';
 
 import find from 'lodash/find';
 import uniqueId from 'lodash/uniqueId';
@@ -22,44 +29,62 @@ import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
 import WorkWidget from "../components/WorkWidget";
 
-const iconMap = {
+const languageIconMap = {
   javascript: [JS, ReactJs],
   html: [Html5],
   css: [Css3],
   java: [Java]
 };
 
+const typeIconMap = {
+  site: LinkIcon,
+  npm: NpmIcon,
+  repo: GithubIcon,
+};
+
 const displayRepos = [
   {
     name: 'blockparty',
     symbol: 'BP',
-    website: 'https://blockparty.global'
+    site: 'https://blockparty.global',
+    type: 'site',
   },
   {
     name: 'plazekproperties',
     symbol: 'PP',
-    website: 'https://www.plazekproperties.com'
+    site: 'https://www.plazekproperties.com',
+    type: 'site',
   },
   {
     name: 'mocha-grommet-reporter',
     symbol: 'MGR',
+    site: 'https://www.npmjs.com/package/mocha-grommet-reporter',
+    type: 'npm',
   },
   {
     name: 'SNAKE',
     symbol: 'S',
+    type: 'repo',
   },
   {
     name: 'plazek',
     symbol: 'ME',
+    type: 'repo',
   },
   {
     name: 'on-track',
     symbol: 'OT',
+    type: 'repo',
   },
 ];
 
 const getLanguages = compose(
-  map(item => ({ name: item.node.name, icons: iconMap[item.node.name.toLowerCase()] })),
+  map(item => ({
+    color: item.node.color,
+    size: item.size,
+    name: item.node.name,
+    icons: languageIconMap[item.node.name.toLowerCase()]
+  })),
   get('edges')
 );
 
@@ -69,7 +94,8 @@ const getRepositories = compose(
     return {
       ...item,
       ...record,
-      languages: getLanguages(item.languages),
+      icon: typeIconMap[record.type],
+      languages: getLanguages(item.languages) ,
     }
   }),
   filter(item => displayRepos.map(item => item.name).includes(item.name)),
@@ -96,7 +122,9 @@ const Work = () => {
                     node {
                       id
                       name
+                      color
                     }
+                    size
                   }
                 }
               }
@@ -109,6 +137,8 @@ const Work = () => {
 
   const repos = getRepositories(data);
 
+  console.log(repos);
+
   return (
     <PageContainer>
       <Box
@@ -116,7 +146,7 @@ const Work = () => {
       >
         <Grid
           gap='medium'
-          columns='small'
+          columns='medium'
         >
           {repos.map(repo => <WorkWidget key={uniqueId()} repo={repo} />)}
         </Grid>

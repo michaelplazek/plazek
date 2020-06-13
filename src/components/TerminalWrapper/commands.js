@@ -59,7 +59,7 @@ export const commands = setTerminal => ({
   },
   exit: {
     method: (_, print) => {
-      print('Have a nice day!');
+      print('Thank you for using the terminal. Have a nice day!');
       setTimeout(() => setTerminal(false), 500);
     },
     options: []
