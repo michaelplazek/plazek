@@ -39,7 +39,7 @@ const Home = () => {
           direction={!isSmall(size) ? 'row' : 'column'}
           gap={!isSmall(size) ? 'large' : 'none'}
         >
-          <Box animation='slideUp'>
+          <Box>
             {
               size !== 'small' && (
                 <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>

@@ -3,10 +3,6 @@ import { Box, Heading, Text } from "grommet";
 
 import uniqueId from 'lodash/uniqueId';
 
-import {
-  DiCode as Code,
-  DiGithubBadge as Github,
-} from "react-icons/di";
 import LanguageMeter from "./LanguageMeter";
 
 const WorkWidget = ({
@@ -55,26 +51,14 @@ const WorkWidget = ({
           { React.createElement(icon, { color: '#333', size: '1.5em', key: uniqueId() }) }
         </Box>
       </Box>
-      <Box margin={{ top: 'small' }}>
-        <Box margin={{ bottom: 'small' }}>
+      <Box margin={{ vertical: 'medium' }}>
+        <Box>
           <Text>{description}</Text>
         </Box>
       </Box>
       <Box>
         <LanguageMeter languages={languages} />
       </Box>
-      {/*<Box align='center' justify='center'>*/}
-        {/*<Heading color='black' margin='none' level={2} size='xlarge'>{symbol}</Heading>*/}
-        {/*<Text size='xsmall'>{name}</Text>*/}
-        {/*<Box direction='row' gap='small' margin='small'>*/}
-          {/*{*/}
-            {/*languages.map(language =>*/}
-              {/*language.icons ? language.icons.map(*/}
-                {/*icon => React.createElement(icon, { color: '#333', key: uniqueId() })*/}
-              {/*) : <Code key={uniqueId()} color='black'/>)*/}
-          {/*}*/}
-        {/*</Box>*/}
-      {/*</Box>*/}
     </Box>
   );
 };
