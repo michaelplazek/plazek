@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Box, Grid, ResponsiveContext } from "grommet";
+import { Anchor, Box, Grid, ResponsiveContext } from "grommet";
 
 import {
   DiJavascript1 as JS,
@@ -144,13 +144,11 @@ const Work = () => {
 
   const repos = getRepositories(data);
 
-  console.log(repos);
-
   return (
     <PageContainer>
       <Box
         fill={true}
-        pad={{ bottom: 'small', horizontal: 'small' }}
+        pad={{ vertical: 'small', horizontal: 'small' }}
       >
         <Grid
           gap='medium'
@@ -158,6 +156,19 @@ const Work = () => {
         >
           {repos.map(repo => <WorkWidget key={uniqueId()} repo={repo} />)}
         </Grid>
+        <Box
+          align='center'
+          justify='center'
+          margin={{ top: 'large' }}
+        >
+          <Anchor
+            color='black'
+            href='https://github.com/michaelplazek'
+            icon={<GithubIcon size='1.5em' />}
+            label='Visit my Github to see more work'
+            target='_blank'
+          />
+        </Box>
       </Box>
     </PageContainer>
   );

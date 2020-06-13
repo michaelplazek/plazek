@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Box, Meter, Text } from "grommet";
+import uniqueId from 'lodash/uniqueId';
 import map from 'lodash/fp/map';
 import compose from 'lodash/fp/compose';
 import orderBy from 'lodash/fp/orderBy';
@@ -26,7 +27,7 @@ const LanguageMeter = ({ languages }) => {
       <Box direction='row' justify='center' align='center' gap='medium'>
         {
           values.map(item => (
-            <Box direction='row' justify='center' align='center' gap='small'>
+            <Box key={uniqueId()} direction='row' justify='center' align='center' gap='small'>
               <Box style={{ background: item.color, width: '0.5em', height: '0.5em' }} />
               <Text>{item.name}</Text>
             </Box>

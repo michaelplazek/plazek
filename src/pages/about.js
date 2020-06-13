@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Box, Grid, Heading, ResponsiveContext, Text } from "grommet";
+import { Anchor, Box, Grid, Heading, ResponsiveContext, Text } from "grommet";
 import uniqueId from 'lodash/uniqueId';
 
 import {
@@ -23,20 +23,20 @@ import Timeline from "../components/Timeline";
 
 const contact = [
   {
-    onClick: () => window.open('https://github.com/michaelplazek', '_blank'),
+    href: 'https://github.com/michaelplazek',
     icon: GithubIcon,
   },
   {
-    onClick: () => window.open('https://www.linkedin.com/in/michael-plazek-8559b8aa/', '_blank'),
     icon: LinkedInIcon,
+    href: 'https://www.linkedin.com/in/michael-plazek-8559b8aa/'
   },
   {
-    onClick: () => window.open('https://twitter.com/PlazekaaS', '_blank'),
     icon: TwitterIcon,
+    href: 'https://twitter.com/PlazekaaS'
   },
   {
-    onClick: () => window.open('mailto:michael.plazek91@gmail.com', '_blank'),
     icon: EmailIcon,
+    href: 'mailto:michael.plazek91@gmail.com'
   },
 ];
 
@@ -66,15 +66,13 @@ const About = () => {
               align='center'
               justify='center'
             >
-              {contact.map(item => React.createElement(
-                item.icon,
-                {
-                  onClick: item.onClick,
-                  size: '1.5em',
-                  style: {
-                    cursor: 'pointer'
-                  }
-                }
+              {contact.map(item => (
+                <Anchor
+                  icon={React.createElement(item.icon, { size: '1.5em' })}
+                  href={item.href}
+                  target='_blank'
+                  color='dark-1'
+                />
               ))}
             </Box>
           </Box>
