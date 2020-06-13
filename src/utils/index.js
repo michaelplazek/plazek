@@ -17,5 +17,7 @@ export const getImageStyle = size => {
       return { width: '150px', height: '150px' };
     case "large":
       return { width: '150px', height: '150px' };
+    default:
+      return { width: '150px', height: '150px' };
   }
 };
