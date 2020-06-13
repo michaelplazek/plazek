@@ -189,7 +189,15 @@ const About = () => {
         pad='medium'
         round={true}
       >
-        <Heading margin={{ bottom: 'small', left: 'medium' }} level={2}>My Timeline</Heading>
+        <Box
+          direction='row'
+          justify='between'
+          align='center'
+          margin={{ bottom: 'small', horizontal: 'medium' }}
+        >
+          <Heading margin='none' level={2}>My Timeline</Heading>
+          <Heading level={3} size='small'>2014 - Present</Heading>
+        </Box>
       <Timeline />
       </Box>
     </PageContainer>
