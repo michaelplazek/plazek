@@ -72,6 +72,7 @@ const About = () => {
                   href={item.href}
                   target='_blank'
                   color='dark-1'
+                  key={uniqueId()}
                 />
               ))}
             </Box>
@@ -188,7 +189,7 @@ const About = () => {
         pad='medium'
         round={true}
       >
-        <Heading margin={{ bottom: 'small' }} level={2}>My Timeline</Heading>
+        <Heading margin={{ bottom: 'small', left: 'medium' }} level={2}>My Timeline</Heading>
       <Timeline />
       </Box>
     </PageContainer>
