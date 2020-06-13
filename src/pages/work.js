@@ -150,7 +150,7 @@ const Work = () => {
     <PageContainer>
       <Box
         fill={true}
-        pad={{ bottom: 'small' }}
+        pad={{ bottom: 'small', horizontal: 'small' }}
       >
         <Grid
           gap='medium'

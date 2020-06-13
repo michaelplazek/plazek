@@ -27,7 +27,8 @@ const WorkWidget = ({
     <Box
       round='small'
       elevation={hovered ? 'medium' : 'small'}
-      border={{ color: 'black', size: 'xsmall' }}
+      background='light-1'
+      // border={{ color: 'black', size: 'xsmall' }}
       pad={{ horizontal: 'medium', vertical: 'small' }}
       fill='vertical'
       onMouseOver={() => setHovered(true)}
@@ -48,7 +49,7 @@ const WorkWidget = ({
           <Heading level={3} margin='none'>{name}</Heading>
         </Box>
         <Box>
-          { React.createElement(icon, { color: 'white', size: '1.5em', key: uniqueId() }) }
+          { React.createElement(icon, { color: 'black', size: '1.5em', key: uniqueId() }) }
         </Box>
       </Box>
       <Box margin={{ vertical: 'medium' }}>
