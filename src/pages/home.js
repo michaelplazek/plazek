@@ -74,16 +74,16 @@ const Home = () => {
       </Box>
       <Fab onClick={() => setTerminal(!hasTerminal)} />
       {hasTerminal && (
-          <Box
-            fill='horizontal'
-            style={{
-              position: 'absolute',
-              bottom: '0px',
-              width: '100vw',
-            }}
-          >
-            <TerminalWrapper setTerminal={setTerminal} />
-          </Box>
+        <Box
+          fill='horizontal'
+          style={{
+            position: 'absolute',
+            bottom: '0px',
+            width: '100vw',
+          }}
+        >
+          <TerminalWrapper setTerminal={setTerminal} />
+        </Box>
       )}
     </Box>
   );
