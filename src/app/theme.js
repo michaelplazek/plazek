@@ -6,6 +6,9 @@ const theme = {
     font: {
       family: 'Roboto',
     },
+    colors: {
+      'royal-blue': '#2194f3'
+    },
     breakpoints: {
       "small": {
         "value": 600,

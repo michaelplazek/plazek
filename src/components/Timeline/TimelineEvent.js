@@ -1,6 +1,7 @@
 import React from "react";
-import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import uniqueId from 'lodash/uniqueId';
 
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { Box, Heading, Text } from "grommet";
 
 const TimelineEvent = ({
@@ -15,10 +16,10 @@ const TimelineEvent = ({
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
-      contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+      contentStyle={{ background: '#2194f3', color: '#fff', border: '0px' }}
+      contentArrowStyle={{ borderRight: '7px solid #2194f3' }}
       date={<Text>{date}</Text>}
-      iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+      iconStyle={{ background: '#2194f3', color: 'white' }}
       icon={React.createElement(icon)}
       animate={true}
     >
@@ -34,6 +35,7 @@ const TimelineEvent = ({
       <Box direction='row' wrap={true}>
         {tags.map(item => (
           <Box
+            key={uniqueId()}
             background='white'
             round={true}
             pad={{ vertical: 'xsmall', horizontal: 'small' }}

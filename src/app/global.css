@@ -9,6 +9,59 @@
     overflow-x: hidden !important;
 }
 
+/**
+Override the vertical timeline CSS for new media breakpoints
+ */
+@media only screen and (min-width: 900px) {
+    .vertical-timeline.vertical-timeline--two-columns {
+        width: 90%;
+    }
+    .vertical-timeline.vertical-timeline--two-columns:before {
+        left: 50%;
+        margin-left: -2px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    /* inverse bounce effect on even content blocks */
+    .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in,
+    .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in {
+        -webkit-animation: cd-bounce-2-inverse 0.6s;
+        -moz-animation: cd-bounce-2-inverse 0.6s;
+        animation: cd-bounce-2-inverse 0.6s;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+        visibility: visible;
+        -webkit-animation: cd-bounce-2-inverse 0.6s;
+        -moz-animation: cd-bounce-2-inverse 0.6s;
+        animation: cd-bounce-2-inverse 0.6s;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .vertical-timeline--two-columns .vertical-timeline-element-icon {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .vertical-timeline-element {
+        margin: 4em 0;
+    }
+    .vertical-timeline-element:first-child {
+        margin-top: 0;
+    }
+    .vertical-timeline-element:last-child {
+        margin-bottom: 0;
+    }
+}
+
 @media only screen and (min-width: 900px) {
     .vertical-timeline--two-columns .vertical-timeline-element-content {
         margin-left: 0;
@@ -48,26 +101,5 @@
         left: auto;
         right: 124%;
         text-align: right;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    .vertical-timeline-element {
-        margin: 4em 0;
-    }
-    .vertical-timeline-element:first-child {
-        margin-top: 0;
-    }
-    .vertical-timeline-element:last-child {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    .vertical-timeline--two-columns .vertical-timeline-element-icon {
-        width: 60px;
-        height: 60px;
-        left: 50%;
-        margin-left: -30px;
     }
 }

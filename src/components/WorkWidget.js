@@ -26,7 +26,6 @@ const WorkWidget = ({
   return (
     <Box
       round='small'
-      background='neutral-2'
       elevation={hovered ? 'medium' : 'small'}
       border={{ color: 'black', size: 'xsmall' }}
       pad={{ horizontal: 'medium', vertical: 'small' }}
@@ -39,6 +38,7 @@ const WorkWidget = ({
       onClick={() => window.open(site || url, '_blank')}
       justify='between'
     >
+      <Box>
       <Box
         direction='row'
         justify='between'
@@ -48,13 +48,14 @@ const WorkWidget = ({
           <Heading level={3} margin='none'>{name}</Heading>
         </Box>
         <Box>
-          { React.createElement(icon, { color: '#333', size: '1.5em', key: uniqueId() }) }
+          { React.createElement(icon, { color: 'white', size: '1.5em', key: uniqueId() }) }
         </Box>
       </Box>
       <Box margin={{ vertical: 'medium' }}>
         <Box>
           <Text>{description}</Text>
         </Box>
+      </Box>
       </Box>
       <Box>
         <LanguageMeter languages={languages} />

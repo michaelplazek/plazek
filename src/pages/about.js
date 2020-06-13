@@ -97,8 +97,13 @@ const About = () => {
           </Box>
         </Box>
       </Grid>
-      <Box margin={{ top: 'medium' }}>
-        <Heading level={2}>My Timeline</Heading>
+      <Box
+        background='light-1'
+        margin={{ top: 'medium' }}
+        pad='medium'
+        round={true}
+      >
+        <Heading margin={{ bottom: 'small' }} level={2}>My Timeline</Heading>
       <Timeline />
       </Box>
     </PageContainer>
