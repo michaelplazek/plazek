@@ -48,33 +48,39 @@ const displayRepos = [
     symbol: 'BP',
     site: 'https://blockparty.global',
     type: 'site',
+    description: 'Peer-to-peer cryptocurrency forum for exchanging cash for crypto. Avoid long wait times, transaction fees, and remain 100% anonymous. Mobile only.',
   },
   {
     name: 'plazekproperties',
     symbol: 'PP',
     site: 'https://www.plazekproperties.com',
     type: 'site',
+    description: 'Real estate site built for Plazek Properties. Quickly search for available units and view pictures of the property.'
   },
   {
     name: 'mocha-grommet-reporter',
     symbol: 'MGR',
     site: 'https://www.npmjs.com/package/mocha-grommet-reporter',
     type: 'npm',
+    description: 'Custom web reporter plugin for the Mocha test framework. Designed to give visibility into the unit test metrics of various teams',
   },
   {
     name: 'SNAKE',
     symbol: 'S',
     type: 'repo',
+    description: 'Classic Snake game built in MIPS Assembly language.'
   },
   {
     name: 'plazek',
     symbol: 'ME',
     type: 'repo',
+    description: 'The code for this website! Built using Gatsby and deployed using Netlify.'
   },
   {
     name: 'on-track',
     symbol: 'OT',
     type: 'repo',
+    description: 'Highly detailed train monitoring system and simulator built for use by the PAAC.'
   },
 ];
 

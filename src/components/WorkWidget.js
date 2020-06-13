@@ -21,6 +21,7 @@ const WorkWidget = ({
     languages,
     site,
     icon,
+    description
   } = repo;
 
   const [hovered, setHovered] = useState(false);
@@ -51,6 +52,9 @@ const WorkWidget = ({
         <Box>
           { React.createElement(icon, { color: '#333', size: '1.5em', key: uniqueId() }) }
         </Box>
+      </Box>
+      <Box margin={{ top: 'small' }}>
+        <Text>{description}</Text>
       </Box>
       {/*<Box align='center' justify='center'>*/}
         {/*<Heading color='black' margin='none' level={2} size='xlarge'>{symbol}</Heading>*/}
