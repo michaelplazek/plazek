@@ -8,6 +8,8 @@ import face from '../images/face.jpg';
 import { use, know, play } from '../constants/icons';
 import { getImageStyle } from "../utils";
 
+import Timeline from "../components/Timeline";
+
 const About = () => {
 
   const size = useContext(ResponsiveContext);
@@ -95,6 +97,10 @@ const About = () => {
           </Box>
         </Box>
       </Grid>
+      <Box margin={{ top: 'medium' }}>
+        <Heading level={2}>My Timeline</Heading>
+      <Timeline />
+      </Box>
     </PageContainer>
   );
 };

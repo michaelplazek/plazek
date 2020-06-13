@@ -26,9 +26,9 @@ const WorkWidget = ({
   return (
     <Box
       round='small'
-      background='white'
+      background='neutral-2'
       elevation={hovered ? 'medium' : 'small'}
-      border={{ color: 'black', size: 'small' }}
+      border={{ color: 'black', size: 'xsmall' }}
       pad={{ horizontal: 'medium', vertical: 'small' }}
       fill='vertical'
       onMouseOver={() => setHovered(true)}
