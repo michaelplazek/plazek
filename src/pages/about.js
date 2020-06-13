@@ -2,6 +2,17 @@ import React, { useContext } from "react";
 import { Box, Grid, Heading, ResponsiveContext, Text } from "grommet";
 import uniqueId from 'lodash/uniqueId';
 
+import {
+  FaLinkedin as LinkedInIcon,
+  FaTwitterSquare as TwitterIcon
+} from 'react-icons/fa'
+import {
+  DiGithubBadge as GithubIcon
+} from 'react-icons/di'
+import {
+  AiOutlineMail as EmailIcon,
+} from 'react-icons/ai'
+
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
 import face from '../images/face.jpg';
@@ -9,6 +20,25 @@ import { use, know, play } from '../constants/icons';
 import { getImageStyle } from "../utils";
 
 import Timeline from "../components/Timeline";
+
+const contact = [
+  {
+    onClick: () => window.open('https://github.com/michaelplazek', '_blank'),
+    icon: GithubIcon,
+  },
+  {
+    onClick: () => window.open('https://www.linkedin.com/in/michael-plazek-8559b8aa/', '_blank'),
+    icon: LinkedInIcon,
+  },
+  {
+    onClick: () => window.open('https://twitter.com/PlazekaaS', '_blank'),
+    icon: TwitterIcon,
+  },
+  {
+    onClick: () => window.open('mailto:michael.plazek91@gmail.com', '_blank'),
+    icon: EmailIcon,
+  },
+];
 
 const About = () => {
 
@@ -29,6 +59,24 @@ const About = () => {
               Red alert. Reproduce, scotty. This coordinates has only been transfered by a carnivorous space suit.
               Ship-wide beauties lead to the ionic cannon. Carnivorous sensors, to the saucer section.
             </Text>
+            <Box
+              direction='row'
+              gap='medium'
+              margin={{ top: size === 'small' ? 'large' : 'medium' }}
+              align='center'
+              justify='center'
+            >
+              {contact.map(item => React.createElement(
+                item.icon,
+                {
+                  onClick: item.onClick,
+                  size: '1.5em',
+                  style: {
+                    cursor: 'pointer'
+                  }
+                }
+              ))}
+            </Box>
           </Box>
           <Box basis='1/4' align='center' pad={{ vertical: 'medium' }}>
             <Box
