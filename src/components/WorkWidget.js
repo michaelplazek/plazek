@@ -7,6 +7,7 @@ import {
   DiCode as Code,
   DiGithubBadge as Github,
 } from "react-icons/di";
+import LanguageMeter from "./LanguageMeter";
 
 const WorkWidget = ({
   repo
@@ -40,6 +41,7 @@ const WorkWidget = ({
       onBlur={() => setHovered(false)}
       style={{ cursor: 'pointer' }}
       onClick={() => window.open(site || url, '_blank')}
+      justify='between'
     >
       <Box
         direction='row'
@@ -54,7 +56,12 @@ const WorkWidget = ({
         </Box>
       </Box>
       <Box margin={{ top: 'small' }}>
-        <Text>{description}</Text>
+        <Box margin={{ bottom: 'small' }}>
+          <Text>{description}</Text>
+        </Box>
+      </Box>
+      <Box>
+        <LanguageMeter languages={languages} />
       </Box>
       {/*<Box align='center' justify='center'>*/}
         {/*<Heading color='black' margin='none' level={2} size='xlarge'>{symbol}</Heading>*/}

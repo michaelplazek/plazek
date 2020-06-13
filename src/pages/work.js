@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Box, Grid } from "grommet";
+import { Box, Grid, ResponsiveContext } from "grommet";
 
 import {
   DiJavascript1 as JS,
@@ -111,6 +111,7 @@ const getRepositories = compose(
 
 const Work = () => {
 
+  const size = useContext(ResponsiveContext);
   const data = useStaticQuery(graphql`
     query GitHubQuery {
       github {
@@ -152,7 +153,7 @@ const Work = () => {
       >
         <Grid
           gap='medium'
-          columns='medium'
+          columns={size !== 'small' ? 'medium' : undefined}
         >
           {repos.map(repo => <WorkWidget key={uniqueId()} repo={repo} />)}
         </Grid>
