@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <PageContainer>
-      <Box margin={{ top: 'medium' }}>
+      <Box margin={{ vertical: 'medium' }}>
         <Heading margin='none' level={2}>About me</Heading>
         <Box
           direction={size === 'small' ? 'column' : 'row'}
@@ -42,15 +42,28 @@ const About = () => {
       </Box>
       <Grid
         columns='medium'
-        gap={size === 'small' || size === 'medium-small' ? undefined : 'medium'}
+        gap="large"
       >
         { /* TODO: create a component for these fellas */}
-        <Box>
-          <Heading level={2}>Things I <b>use</b></Heading>
+        <Box
+          background='light-1'
+          round={true}
+          pad='medium'
+        >
+          <Heading
+            margin={{
+              top: 'small',
+              left: 'small',
+              bottom: 'medium'
+            }}
+            level={2}
+          >
+            Things I <b>use</b>
+          </Heading>
           <Box
             wrap={true}
             style={{ height: '256px' }}
-            gap='small'
+            gap='medium'
           >
             {
               use.map(({ name, icon }) => (
@@ -62,12 +75,25 @@ const About = () => {
             }
           </Box>
         </Box>
-        <Box>
-          <Heading level={2}>Things I <b>know</b></Heading>
+        <Box
+          background='light-1'
+          round={true}
+          pad='medium'
+        >
+          <Heading
+            margin={{
+              top: 'small',
+              left: 'small',
+              bottom: 'medium'
+            }}
+            level={2}
+          >
+            Things I <b>know</b>
+          </Heading>
           <Box
             wrap={true}
             style={{ height: '256px' }}
-            gap='small'
+            gap='medium'
           >
             {
               know.map(({ name, icon }) => (
@@ -79,12 +105,25 @@ const About = () => {
             }
           </Box>
         </Box>
-        <Box>
-          <Heading level={2}>Things I've <b>played with</b></Heading>
+        <Box
+          background='light-1'
+          round={true}
+          pad='medium'
+        >
+          <Heading
+            margin={{
+              top: 'small',
+              left: 'small',
+              bottom: 'medium'
+            }}
+            level={2}
+          >
+            Things I've <b>played with</b>
+          </Heading>
           <Box
             wrap={true}
-            gap='small'
-
+            style={{ height: '256px' }}
+            gap='medium'
           >
             {
               play.map(({ name, icon }) => (
@@ -99,7 +138,7 @@ const About = () => {
       </Grid>
       <Box
         background='light-1'
-        margin={{ top: 'medium' }}
+        margin={{ top: 'large' }}
         pad='medium'
         round={true}
       >
