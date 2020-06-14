@@ -9,7 +9,7 @@ const InfoTile = ({ title, description, image }) => {
     <Box>
       <Box
         direction={size === 'small' ? 'column' : 'row'}
-        margin={{ vertical: 'small' }}
+        margin={{ bottom: 'small', horizontal: 'medium' }}
         align='center'
       >
         <Box>

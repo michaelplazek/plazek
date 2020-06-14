@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Anchor, Box, Grid, ResponsiveContext } from "grommet";
+import { Anchor, Box, Grid, Heading, ResponsiveContext } from "grommet";
 
 import {
   DiJavascript1 as JS,
@@ -55,14 +55,14 @@ const displayRepos = [
     symbol: 'PP',
     site: 'https://www.plazekproperties.com',
     type: 'site',
-    description: 'Real estate site built for Plazek Properties. Quickly search for available units and view pictures of the property.'
+    description: 'Real estate site built for Plazek Properties. Quickly search for available units and view pictures of properties.'
   },
   {
     name: 'mocha-grommet-reporter',
     symbol: 'MGR',
     site: 'https://www.npmjs.com/package/mocha-grommet-reporter',
     type: 'npm',
-    description: 'Custom web reporter plugin for the Mocha test framework. Designed to give visibility into the unit test metrics of various teams',
+    description: 'Custom web reporter plugin for the Mocha test framework. Designed to give visibility into the unit test metrics of various teams.',
   },
   {
     name: 'SNAKE',
@@ -150,6 +150,7 @@ const Work = () => {
         fill={true}
         pad={{ vertical: 'small', horizontal: 'small' }}
       >
+        <Heading level={2}>Some things I've built on the side...</Heading>
         <Grid
           gap='medium'
           columns={size !== 'small' ? 'medium' : undefined}
