@@ -1,8 +1,11 @@
 import React from "react";
 import { Box } from "grommet";
 import Seo from "./Seo";
+import { needsFooterSupport } from "../utils/browser";
 
 const PageContainer = ({ children, background, title }) => {
+
+  const addFooter = needsFooterSupport();
 
   return (
     <Box
@@ -12,11 +15,12 @@ const PageContainer = ({ children, background, title }) => {
       <Seo title={title} />
       <Box
         style={{ transform: 'translateY(100px)' }}
-        margin={{ horizontal: 'medium', bottom: 'medium' }}
+        margin={{ horizontal: 'medium',  bottom: 'medium' }}
         overflow='hidden'
       >
         {children}
       </Box>
+      {addFooter && <Box height='small' fill='horizontal' />}
     </Box>
   );
 };
