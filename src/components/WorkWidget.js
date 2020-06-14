@@ -26,7 +26,7 @@ const WorkWidget = ({
   return (
     <Box
       round='small'
-      elevation={hovered ? 'medium' : 'small'}
+      elevation={hovered ? 'medium' : 'none'}
       background='light-1'
       pad='medium'
       fill='vertical'

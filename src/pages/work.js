@@ -55,14 +55,14 @@ const displayRepos = [
     symbol: 'PP',
     site: 'https://www.plazekproperties.com',
     type: 'site',
-    description: 'Real estate site built for Plazek Properties. Quickly search for available units and view pictures of the property.'
+    description: 'Real estate site built for Plazek Properties. Quickly search for available units and view pictures of properties.'
   },
   {
     name: 'mocha-grommet-reporter',
     symbol: 'MGR',
     site: 'https://www.npmjs.com/package/mocha-grommet-reporter',
     type: 'npm',
-    description: 'Custom web reporter plugin for the Mocha test framework. Designed to give visibility into the unit test metrics of various teams',
+    description: 'Custom web reporter plugin for the Mocha test framework. Designed to give visibility into the unit test metrics of various teams.',
   },
   {
     name: 'SNAKE',
