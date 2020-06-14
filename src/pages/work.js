@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Anchor, Box, Grid, ResponsiveContext } from "grommet";
+import { Anchor, Box, Grid, Heading, ResponsiveContext } from "grommet";
 
 import {
   DiJavascript1 as JS,
@@ -150,6 +150,7 @@ const Work = () => {
         fill={true}
         pad={{ vertical: 'small', horizontal: 'small' }}
       >
+        <Heading level={2}>Some things I've built on the side...</Heading>
         <Grid
           gap='medium'
           columns={size !== 'small' ? 'medium' : undefined}
