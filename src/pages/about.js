@@ -45,7 +45,7 @@ const About = () => {
   const size = useContext(ResponsiveContext);
 
   return (
-    <PageContainer>
+    <PageContainer title='About'>
       <Box margin={{ vertical: 'medium' }}>
         <Heading margin='none' level={2}>About me</Heading>
         <Box

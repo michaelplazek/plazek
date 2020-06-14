@@ -1,6 +1,7 @@
 import compose from 'lodash/fp/compose';
 import values from 'lodash/fp/values';
 import omit from 'lodash/fp/omit';
+import get from 'lodash/fp/get';
 
 export const hasFlags = args => args.length > 1;
 export const getFlags = compose(

@@ -145,7 +145,7 @@ const Work = () => {
   const repos = getRepositories(data);
 
   return (
-    <PageContainer>
+    <PageContainer title="Work">
       <Box
         fill={true}
         pad={{ vertical: 'small', horizontal: 'small' }}

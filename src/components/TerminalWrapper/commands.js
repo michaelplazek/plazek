@@ -1,4 +1,4 @@
-import { graphql, navigate, useStaticQuery } from "gatsby";
+import { navigate } from "gatsby";
 import resume from '../../images/plazek_resume.pdf';
 import { getFlags } from "./utils";
 
