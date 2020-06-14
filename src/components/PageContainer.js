@@ -24,8 +24,7 @@ const PageContainer = ({ children, background, title }) => {
       >
         {children}
       </Box>
-
-      { addFooter && <div style={{ height: '240px' }}/>}
+      <div style={{ height: addFooter ? '240px': '40px' }}/>
     </Box>
   );
 };
