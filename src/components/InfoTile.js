@@ -10,14 +10,15 @@ const InfoTile = ({ title, description, image }) => {
       <Box
         direction={size === 'small' ? 'column' : 'row'}
         margin={{ vertical: 'small' }}
+        align='center'
       >
-        <Box basis='1/2'>
+        <Box>
           <Heading level={3}>{title}</Heading>
           <Text>{description}</Text>
         </Box>
 
-        <Box basis='1/2'>
-          <div />
+        <Box  margin={{ right: 'xlarge' }} justify='center' align='center'>
+          {image && React.createElement(image)}
         </Box>
 
       </Box>

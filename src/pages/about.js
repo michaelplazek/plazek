@@ -210,7 +210,7 @@ const About = () => {
       >
         <Heading level={2}>About this site</Heading>
         {
-          site.map(item => <InfoTile key={uniqueId()} title={item.title} description={item.description} />)
+          site.map(item => <InfoTile key={uniqueId()} title={item.title} description={item.description} image={item.image} />)
         }
       </Box>
     </PageContainer>
