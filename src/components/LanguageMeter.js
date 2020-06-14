@@ -24,7 +24,7 @@ const LanguageMeter = ({ languages }) => {
         size='full'
         values={values}
       />
-      <Box direction='row' justify='center' align='center' gap='medium'>
+      <Box direction='row' justify='center' align='center' gap='medium' margin={{ top: 'small' }}>
         {
           values.map(item => (
             <Box key={uniqueId()} direction='row' justify='center' align='center' gap='small'>

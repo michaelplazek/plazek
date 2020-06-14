@@ -1,4 +1,8 @@
-import resume from '../../images/plazek_resume.pdf'
+import { navigate } from "gatsby";
+import includes from 'lodash/includes';
+
+import resume from '../../images/plazek_resume.pdf';
+import { getFlags, hasArgs, isEmpty, hasFlags, getArgs } from "./utils";
 
 const download = (input, output) => {
   const element = document.createElement('a');
@@ -14,22 +18,59 @@ const download = (input, output) => {
 };
 
 const downloadCommand = (args, print) => {
-  if (args.resume) {
-    print('Downloading resume...');
-    return download(resume, 'plazek_resume.png');
-  } else {
-    return print('Please provide a file. Run \'help\' for more info.');
-  }
+  print('Downloading resume...');
+  return download(resume, 'plazek_resume.png');
 };
 
-export const commands = setTerminal => ({
-  download: {
+const printPaths = (print, getLinks) => {
+  const links = getLinks();
+  links.forEach(({ path }) => print(path))
+};
+
+const logInvalidCommand = (print, command) => print(`Invalid command. Run \'${command} --help\' for more info.`);
+
+const goCommand = (args, print, getLinks) => {
+  console.log(args);
+  if (isEmpty(args)) {
+    return logInvalidCommand(print, 'go');
+  }
+  if (hasFlags(args)) {
+    if (hasArgs(args)) {
+      return logInvalidCommand(print, 'go');
+    }
+
+    const flags = getFlags(args);
+    if (flags.includes('list')) {
+      return printPaths(print, getLinks);
+    } else {
+      return logInvalidCommand(print, 'go');
+    }
+  }
+
+  if (hasArgs(args)) {
+    const a = getArgs(args);
+    if (a.length === 1) {
+      return navigate(a[0]);
+    } else {
+      return logInvalidCommand(print, 'go');
+    }
+  }
+
+  return logInvalidCommand(print, 'go');
+};
+
+export const commands = (setTerminal, getLinks) => ({
+  resume: {
     method: downloadCommand,
-    options: [{
-      name: 'resume',
-      description: 'The current resume of Michael Plazek',
-    }]
+    options: []
   },
+  // go: {
+  //   method: (args, print) => goCommand(args, print, getLinks),
+  //   options: [{
+  //     name: 'list',
+  //     description: 'list all of the available paths',
+  //   }]
+  // },
   exit: {
     method: (_, print) => {
       print('Thank you for using the terminal. Have a nice day!');
@@ -40,6 +81,7 @@ export const commands = setTerminal => ({
 });
 
 export const descriptions = {
-  download: 'download a static file from the build. Please use with one of the following flags: [--resume]',
+  resume: "download my resume from the build",
+  // go: 'navigate to an internal path in this app. Usage: go <path>',
   exit: 'exit the terminal experience'
 };

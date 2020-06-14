@@ -11,6 +11,7 @@ import { GRADIENT, INVERSE } from "../constants/colors";
 import Fab from "../components/Fab";
 import { isSmall } from "../utils";
 import TerminalWrapper from "../components/TerminalWrapper";
+import Seo from "../components/Seo";
 
 const AppearTransition = posed.div({
   visible: { opacity: 1, transition: { duration: 1000 } },
@@ -27,6 +28,7 @@ const Home = () => {
       fill='vertical'
       style={size !== 'small' ? GRADIENT : undefined}
     >
+      <Seo title="Home" />
       <Box
         fill='vertical'
         align='center'
