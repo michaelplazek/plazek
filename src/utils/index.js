@@ -1,11 +1,14 @@
 export const isSmall = size => size === 'small';
-export const isActive = ({ isCurrent }) => isCurrent ? {
-  style: {
-    fontWeight: 'bold',
-    textDecoration: 'none',
-    color: 'black'
-  }
-} : {};
+export const isActive = ({ isCurrent, isPartiallyCurrent, href }) => {
+  const show = (isPartiallyCurrent && href !== '/') || (isCurrent && href === '/');
+  return show ? {
+    style: {
+      fontWeight: 'bold',
+      textDecoration: 'none',
+      color: 'black'
+    }
+  } : {};
+};
 
 export const getImageStyle = size => {
   switch(size) {

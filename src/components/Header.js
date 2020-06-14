@@ -68,7 +68,9 @@ const Header = () => {
                     <Link
                       style={linkStyle()}
                       to={item.path}
+                      partiallyActive={true}
                       getProps={isActive}
+                      replace
 
                     >
                       {item.label}
