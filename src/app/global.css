@@ -1,3 +1,13 @@
+/**
+    Override default scroll behavior on mobile
+ */
+@media only screen and (min-width: 600px) {
+    html, body { margin: 0; height: 100%; overflow: hidden }
+}
+
+/**
+    Override the terminal styles
+ */
 .terminal-base {
     height: 50vh !important;
     min-height: 0vh !important;
@@ -10,7 +20,7 @@
 }
 
 /**
-Override the vertical timeline CSS for new media breakpoints
+    Override the vertical timeline CSS for new media breakpoints
  */
 @media only screen and (min-width: 900px) {
     .vertical-timeline.vertical-timeline--two-columns {
