@@ -90,8 +90,21 @@ const Header = () => {
                   links.map(link => ({
                     ...link,
                     key: uniqueId(),
-                    label: <Box margin={{ horizontal: 'medium', vertical: 'small' }}><Text>{link.label}</Text></Box>,
-                    onClick: () => navigate(link.path)
+                    label: (
+                      <Box margin={{ horizontal: 'medium', vertical: 'small' }}>
+                        <Text>
+                          <Link
+                            style={linkStyle()}
+                            to={link.path}
+                            partiallyActive={true}
+                            getProps={isActive}
+                            replace
+                          >
+                            {link.label}
+                          </Link>
+                        </Text>
+                      </Box>
+                    ),
                   })).concat({
                     key: uniqueId(),
                     label: (
