@@ -18,8 +18,10 @@ import PageContainer from "../components/PageContainer";
 import face from '../images/face.jpg';
 import { use, know, play } from '../constants/icons';
 import { getImageStyle } from "../utils";
+import site from '../constants/site';
 
 import Timeline from "../components/Timeline";
+import InfoTile from "../components/InfoTile";
 
 const contact = [
   {
@@ -199,6 +201,17 @@ const About = () => {
           <Heading level={3} size='small'>2014 - Present</Heading>
         </Box>
       <Timeline />
+      </Box>
+      <Box
+        background='light-1'
+        margin={{ top: 'large' }}
+        pad='medium'
+        round={true}
+      >
+        <Heading level={2}>About this site</Heading>
+        {
+          site.map(item => <InfoTile key={uniqueId()} title={item.title} description={item.description} />)
+        }
       </Box>
     </PageContainer>
   );

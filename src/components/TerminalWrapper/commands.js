@@ -18,12 +18,8 @@ const download = (input, output) => {
 };
 
 const downloadCommand = (args, print) => {
-  if (hasArgs(args) && getArgs(args)[0] === 'resume') {
-    print('Downloading resume...');
-    return download(resume, 'plazek_resume.png');
-  } else {
-    return print('Please provide a valid file. Run \'help\' for more info.');
-  }
+  print('Downloading resume...');
+  return download(resume, 'plazek_resume.png');
 };
 
 const printPaths = (print, getLinks) => {
@@ -64,12 +60,9 @@ const goCommand = (args, print, getLinks) => {
 };
 
 export const commands = (setTerminal, getLinks) => ({
-  download: {
+  resume: {
     method: downloadCommand,
-    options: [{
-      name: 'resume',
-      description: 'the current resume of Michael Plazek',
-    }]
+    options: []
   },
   // go: {
   //   method: (args, print) => goCommand(args, print, getLinks),
@@ -88,7 +81,7 @@ export const commands = (setTerminal, getLinks) => ({
 });
 
 export const descriptions = {
-  download: "download a static file from the build. Usage: download resume",
-  go: 'navigate to an internal path in this app. Usage: go <path>',
+  resume: "download my resume from the build",
+  // go: 'navigate to an internal path in this app. Usage: go <path>',
   exit: 'exit the terminal experience'
 };
