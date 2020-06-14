@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box } from "grommet";
 import Seo from "./Seo";
 import { needsFooterSupport } from "../utils/browser";
 
 const PageContainer = ({ children, background, title }) => {
 
-  const addFooter = needsFooterSupport();
+  let addFooter;
+  useEffect(() => {
+    addFooter = needsFooterSupport();
+  });
 
   return (
     <Box
