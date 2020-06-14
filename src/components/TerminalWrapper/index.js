@@ -27,7 +27,6 @@ const TerminalWrapper = ({
 
   return (
     <Terminal
-      watchConsoleLogging={true}
       color='white'
       backgroundColor='black'
       prompt='white'
