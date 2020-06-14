@@ -1,5 +1,6 @@
 import { graphql, navigate, useStaticQuery } from "gatsby";
-import resume from '../../images/plazek_resume.pdf'
+import resume from '../../images/plazek_resume.pdf';
+import { getFlags } from "./utils";
 
 const download = (input, output) => {
   const element = document.createElement('a');
@@ -15,10 +16,9 @@ const download = (input, output) => {
 };
 
 const downloadCommand = (args, print) => {
-  console.log(args);
-  if (args.resume) {
-    return print('Downloading resume...');
-    // return download(resume, 'plazek_resume.png');
+  if (args[0] === 'resume') {
+    print('Downloading resume...');
+    return download(resume, 'plazek_resume.png');
   } else {
     return print('Please provide a file. Run \'help\' for more info.');
   }
@@ -29,12 +29,14 @@ const printPaths = (print, getLinks) => {
   links.forEach(({ path }) => print(path))
 };
 
-const go = path => navigate(path);
-
 const goCommand = (args, print, getLinks) => {
   if (args.list) {
-    print('The following paths are available as options.');
     return printPaths(print, getLinks);
+  }
+  if (args.length === 1) {
+    return navigate(args[0]);
+  } else {
+    print('Please use a valid format. Run \'go --help\' for more info.')
   }
 
   return console.log(args);
@@ -51,8 +53,8 @@ export const commands = (setTerminal, getLinks) => ({
   go: {
     method: (args, print) => goCommand(args, print, getLinks),
     options: [{
-      name: 'path',
-      description: 'The relative path you would like to visit',
+      name: 'list',
+      description: 'List all of the available paths',
     }]
   },
   exit: {
@@ -65,7 +67,7 @@ export const commands = (setTerminal, getLinks) => ({
 });
 
 export const descriptions = {
-  download: 'download a static file from the build. Please use with one of the following flags: [--resume]',
-  go: 'navigate to an internal path in this app',
+  download: "download a static file from the build. Usage: download <file>",
+  go: 'navigate to an internal path in this app. Usage: go <path>',
   exit: 'exit the terminal experience'
 };
