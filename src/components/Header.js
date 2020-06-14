@@ -44,7 +44,6 @@ const Header = () => {
       fill='horizontal'
       height='xsmall'
       justify='between'
-      background='white'
       direction='row'
       align='center'
     >
