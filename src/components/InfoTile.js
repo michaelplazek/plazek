@@ -9,13 +9,14 @@ const InfoTile = ({ title, description, image }) => {
     <Box>
       <Box
         direction={size === 'small' ? 'column' : 'row'}
+        margin={{ vertical: 'small' }}
       >
-        <Box>
+        <Box basis='1/2'>
           <Heading level={3}>{title}</Heading>
           <Text>{description}</Text>
         </Box>
 
-        <Box>
+        <Box basis='1/2'>
           <div />
         </Box>
 
