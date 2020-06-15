@@ -51,9 +51,13 @@ const Home = () => {
                 </AppearTransition>
               )
             }
-            <Heading margin='none' size='xlarge'>
-              UI / UX
-            </Heading>
+            {
+              ((size === 'small' && !hasTerminal) || (size !== 'small')) && (
+                <Heading style={{ position: 'relative' }} margin='none' size='xlarge'>
+                  UI / UX
+                </Heading>
+              )
+            }
             {
               size !== 'small' && (
                 <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
@@ -81,9 +85,21 @@ const Home = () => {
           style={{
             position: 'absolute',
             bottom: '0px',
+            // height: '90vh',
             width: '100vw',
           }}
         >
+          {
+            size === 'small' && (
+              <Box justify='center' margin={{ vertical: 'large' }} direction='row' gap='small' align='center'>
+                <Heading color='black' margin='none' size='medium'>
+                  UI / UX
+                </Heading>
+                <Heading color='black' margin='none' size='small' level={2}>DEVELOPER</Heading>
+              </Box>
+            )
+          }
+
           <TerminalWrapper setTerminal={setTerminal} />
         </Box>
       )}
