@@ -18,7 +18,7 @@ import PageContainer from "../components/PageContainer";
 import face from '../images/face.jpg';
 import { use, know, play } from '../constants/icons';
 import { getImageStyle } from "../utils";
-import site, { aboutMe } from "../constants/site";
+import site, { aboutMe, aboutThisApplication } from "../constants/site";
 
 import Timeline from "../components/Timeline";
 import InfoTile from "../components/InfoTile";
@@ -205,7 +205,12 @@ const About = () => {
         pad='medium'
         round={true}
       >
-        <Heading margin={{ bottom: 'small', horizontal: 'medium' }} level={2}>About this site</Heading>
+        <Box margin={{ bottom: 'small', horizontal: 'medium' }}>
+          <Heading level={2}>About this site</Heading>
+          <Text margin='none'>
+            {aboutThisApplication}
+          </Text>
+        </Box>
         {
           site.map(item => <InfoTile key={uniqueId()} title={item.title} description={item.description} image={item.image} />)
         }

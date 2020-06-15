@@ -9,6 +9,8 @@ export const aboutMe = 'Although my background is in computer engineering, I\'m 
   'combination, plus an unwavering eye for detail, that has enabled much of my own success as a front end developer. Simply put, it\'s my ' +
   'job to make your job easier.';
 
+export const aboutThisApplication = '';
+
 export default [
   {
     title: 'Application',
