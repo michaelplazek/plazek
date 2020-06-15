@@ -34,7 +34,7 @@ export default [
     description: 'After any code is pushed to Github and merged to master, Netlify triggers a build and deploy through managed CI/CD pipeline. ' +
       'Maybe before I would have used CircleCI or Jenkins for my CI/CD, which would test, build, and push a bundle to an S3 bucket that was served ' +
       'through CloudFront and connected to DNS via Route53. Now, all of that is abstracted by Netlify. They handle the entire DevOps stack for ' +
-      'you and it is delightful. They also have support for Lambdas and other serverless functionality that can tied in through various triggers.',
+      'you - SSL certs and all! They also have support for Lambdas and other serverless functionality that can tied in through various triggers.',
     image: DeployGraphic,
   },
 ];
