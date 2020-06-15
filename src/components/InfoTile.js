@@ -17,7 +17,7 @@ const InfoTile = ({ title, description, image }) => {
           <Text>{description}</Text>
         </Box>
 
-        <Box  margin={{ right: 'xlarge', left: 'medium' }} justify='center' align='center'>
+        <Box  margin={{ right: 'xlarge', left: size !== 'small' ? 'medium' : 'xlarge', top: 'medium' }} justify='center' align='center'>
           {image && React.createElement(image)}
         </Box>
 
