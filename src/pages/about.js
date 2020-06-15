@@ -18,7 +18,7 @@ import PageContainer from "../components/PageContainer";
 import face from '../images/face.jpg';
 import { use, know, play } from '../constants/icons';
 import { getImageStyle } from "../utils";
-import site from '../constants/site';
+import site, { aboutMe, aboutThisApplication } from "../constants/site";
 
 import Timeline from "../components/Timeline";
 import InfoTile from "../components/InfoTile";
@@ -56,10 +56,7 @@ const About = () => {
         >
           <Box pad={{ vertical: 'small' }} basis='3/4'>
             <Text>
-              Anomaly at the moon was the attitude of alignment, accelerated to a mysterious creature.
-              It is an extraterrestrial love, sir. None of these deaths will be lost in nuclear fluxs like galaxies in resistances.
-              Red alert. Reproduce, scotty. This coordinates has only been transfered by a carnivorous space suit.
-              Ship-wide beauties lead to the ionic cannon. Carnivorous sensors, to the saucer section.
+              {aboutMe}
             </Text>
             <Box
               direction='row'
@@ -208,7 +205,12 @@ const About = () => {
         pad='medium'
         round={true}
       >
-        <Heading margin={{ bottom: 'small', horizontal: 'medium' }} level={2}>About this site</Heading>
+        <Box margin={{ bottom: 'small', horizontal: 'medium' }}>
+          <Heading level={2}>About this site</Heading>
+          <Text margin='none'>
+            {aboutThisApplication}
+          </Text>
+        </Box>
         {
           site.map(item => <InfoTile key={uniqueId()} title={item.title} description={item.description} image={item.image} />)
         }

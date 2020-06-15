@@ -1,5 +1,4 @@
 import { navigate } from "gatsby";
-import includes from 'lodash/includes';
 
 import resume from '../../images/plazek_resume.pdf';
 import { getFlags, hasArgs, isEmpty, hasFlags, getArgs } from "./utils";
