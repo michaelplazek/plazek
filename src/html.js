@@ -22,22 +22,6 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      {/* Since HTML is prerendered, need to wait until the JS
-          has loaded to show the screen. This hack fixes the flashing
-          on refresh.
-       */}
-      <script
-        async
-        defer
-        dangerouslySetInnerHTML={{
-          __html: `
-            var item = document.getElementById("hide-content");
-            setTimeout(function() {
-              item.removeAttribute("id");
-            }, 500)
-        `,
-        }}
-      />
     </html>
   )
 }
