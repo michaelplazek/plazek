@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <Box
       fill='vertical'
-      style={size !== 'small' ? GRADIENT : undefined}
+      style={GRADIENT}
     >
       <Seo title="Home" />
       <Box
@@ -53,7 +53,7 @@ const Home = () => {
             }
             {
               ((size === 'small' && !hasTerminal) || (size !== 'small')) && (
-                <Heading style={{ position: 'relative' }} margin='none' size='xlarge'>
+                <Heading style={{ position: 'relative', bottom: size === 'small' ? '0.4em' : 0 }} margin='none' size='xlarge'>
                   UI / UX
                 </Heading>
               )
@@ -69,10 +69,14 @@ const Home = () => {
             }
           </Box>
           <Box
-            style={{
-              position: 'relative',
-              top: !isSmall(size) && !hasTerminal ? '1.55em' : 0
-            }}
+            style={(() => {
+              const obj = {
+                position: 'relative',
+              };
+              if (size !== 'small' && !hasTerminal) obj.top = "1.55em";
+              else obj.bottom = "0.8em";
+              return obj;
+            })()}
           >
             <Heading margin='none' level={2}>DEVELOPER</Heading>
           </Box>
@@ -85,7 +89,6 @@ const Home = () => {
           style={{
             position: 'absolute',
             bottom: '0px',
-            // height: '90vh',
             width: '100vw',
           }}
         >
