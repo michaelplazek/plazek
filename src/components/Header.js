@@ -6,8 +6,8 @@ import { Menu as MenuIcon } from "grommet-icons";
 import uniqueId from 'lodash/uniqueId';
 import get from 'lodash/get';
 
-import DesktopLogo from "./DesktopLogo";
-import MobileLogo from "./MobileLogo";
+import DesktopLogo from "../svgs/DesktopLogo";
+import MobileLogo from "../svgs/MobileLogo";
 
 import { isActive, isSmall } from "../utils";
 import resume from '../images/plazek_resume.pdf';
@@ -44,7 +44,7 @@ const Header = () => {
       fill='horizontal'
       height='xsmall'
       justify='between'
-      background='white'
+      // background='white'
       direction='row'
       align='center'
     >
@@ -85,7 +85,7 @@ const Header = () => {
           <Fragment>
             <Box margin={{ left: 'large' }}>
               <Menu
-                icon={<MenuIcon size='large' color='black' />}
+                icon={<MenuIcon size='large' color='white' />}
                 items={
                   links.map(link => ({
                     ...link,

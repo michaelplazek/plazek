@@ -3,7 +3,10 @@ export const INVERSE = {
   mixBlendMode: 'difference'
 };
 
-export const GRADIENT = {
-  background: 'linear-gradient(180deg, #FFF 50%, #000 50%)',
+export const
+  GRADIENT = {
+  // background: 'linear-gradient(180deg, #FFF 50%, #000 50%)',
+  background: 'black',
+  backgroundSize: '100px',
   zIndex: 1,
 };
