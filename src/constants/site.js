@@ -3,11 +3,11 @@ import BuildGraphic from '../svgs/BuildGraphic';
 import DeployGraphic from '../svgs/DeployGraphic';
 
 export const aboutMe = 'Although my background is in computer engineering, I\'m fascinated by the challenges that ' +
-  'a user interface presents. Not only are they surprisingly complex technically, they also are representative of the mentality ' +
-  'and branding of their creators in a uniquely visual way. In the oversaturated domain of web apps, experience is everything, and the UI often ' +
-  'drives that experience, which means that UI developers need to have a combination of hard and soft skills to be successful. It\s this ' +
+  'a user interface presents. Not only are they undoubtedly complex, they also are representative of the mentality ' +
+  'and branding of their creators in a uniquely visual way. In the oversaturated domain of web apps, experience is everything, and the user interface often ' +
+  'drives that experience, which means that front end developers need to have a combination of hard and soft skills to be successful. It\s this ' +
   'combination, plus an unwavering eye for detail, that has enabled much of my own success as a front end developer. Simply put, it\'s my ' +
-  'job to make your job easier.';
+  'job to make your job easier, through code.';
 
 export const aboutThisApplication = '';
 
