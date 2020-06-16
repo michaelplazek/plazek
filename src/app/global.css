@@ -9,6 +9,10 @@
     Override the terminal styles
  */
 
+#hide-content {
+    visibility: hidden;
+}
+
 .terminal-base {
     height: 50vh !important;
     min-height: 0vh !important;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Grommet } from 'grommet';
 
 import { StateProvider } from "./context";
