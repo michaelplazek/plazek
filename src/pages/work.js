@@ -80,7 +80,7 @@ const displayRepos = [
     name: 'on-track',
     symbol: 'OT',
     type: 'repo',
-    description: 'Highly detailed train monitoring system and simulator built for use by the PAAC.'
+    description: 'High definition train monitoring system and simulator built for use by the PAAC.'
   },
 ];
 
