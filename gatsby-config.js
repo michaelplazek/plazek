@@ -39,6 +39,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon.png`,
+        icon_options: {
+          purpose: `maskable`,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
     },
