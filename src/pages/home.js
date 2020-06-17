@@ -31,52 +31,47 @@ const Home = () => {
       <Seo title="Home" />
       <Box
         fill='vertical'
+        style={INVERSE}
         align='center'
         justify='center'
-        style={INVERSE}
       >
         <Box
+          // fill='vertical'
+          // justify='center'
           align='center'
           style={hasTerminal ? { position: 'relative', bottom: '20vh' } : {}}
           direction={!isSmall(size) ? 'row' : 'column'}
           gap={!isSmall(size) ? 'large' : 'none'}
         >
           <Box>
-            {
-              size !== 'small' && (
-                <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
-                  <Heading margin='none' size='xlarge'>
-                    UI / UX
-                  </Heading>
-                </AppearTransition>
-              )
-            }
+            <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
+              <Heading margin='none' size='xlarge'>
+                UI / UX
+              </Heading>
+            </AppearTransition>
             {
               ((size === 'small' && !hasTerminal) || (size !== 'small')) && (
-                <Heading style={{ position: 'relative', bottom: size === 'small' ? '0.4em' : 0 }} margin='none' size='xlarge'>
+                <Heading margin='none' size='xlarge'>
                   UI / UX
                 </Heading>
               )
             }
-            {
-              size !== 'small' && (
-                <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
-                  <Heading margin='none' size='xlarge'>
-                    UI / UX
-                  </Heading>
-                </AppearTransition>
-              )
-            }
+            <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
+              <Heading margin='none' size='xlarge'>
+                UI / UX
+              </Heading>
+            </AppearTransition>
           </Box>
           <Box
-            style={(() => {
-              const obj = {
+            style={(() => (
+              (size !== 'small' && !hasTerminal) ? {
                 position: 'relative',
-              };
-              if (size !== 'small' && !hasTerminal) obj.top = "1.55em";
-              else obj.bottom = "0.8em";
-              return obj;
-            })()}
+                top: "1.55em"
+              } : {
+                position: 'absolute',
+                top: '70vh',
+              }
+            ))()}
           >
             <Heading margin='none' level={2}>DEVELOPER</Heading>
           </Box>
