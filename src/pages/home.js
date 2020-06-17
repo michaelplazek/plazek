@@ -90,10 +90,9 @@ const Home = () => {
           {
             size === 'small' && (
               <Box justify='center' margin={{ vertical: 'large' }} direction='row' gap='small' align='center'>
-                <Heading color='black' margin='none' size='medium'>
+                <Heading color='black' margin='none' size='large'>
                   UI / UX
                 </Heading>
-                <Heading color='black' margin='none' size='small' level={2}>DEVELOPER</Heading>
               </Box>
             )
           }
