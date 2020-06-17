@@ -39,16 +39,11 @@ const Template = ({
           </Text>
         </Box>
         <Box
-          direction={size !== 'small' ? 'row' : 'column'}
-          justify='between'
-          align={size !== 'small' ? 'center' : 'start'}>
-          <Box>
-            <Heading margin='none' level={1}>{frontmatter.title}</Heading>
-            <Heading margin={{ vertical: 'xsmall' }} level={2} size='small'>{frontmatter.subtitle}</Heading>
-          </Box>
-          <Box>
-            <Text>{frontmatter.date}</Text>
-          </Box>
+          gap='small'
+          fill='horizontal'
+          >
+          <Heading margin='none' level={1}>{frontmatter.title}</Heading>
+          <Text>{frontmatter.date}</Text>
         </Box>
         <Box
           dangerouslySetInnerHTML={{ __html: html }}
@@ -68,7 +63,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
-        subtitle
       }
     }
   }
