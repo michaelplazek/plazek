@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
+import orderBy from 'lodash/fp/orderBy';
+
 import { Anchor, Box, Grid, Heading, ResponsiveContext } from "grommet";
 
 import {
@@ -48,6 +50,7 @@ const displayRepos = [
     symbol: 'BP',
     site: 'https://blockparty.global',
     type: 'site',
+    order: 1,
     description: 'Peer-to-peer cryptocurrency forum for exchanging cash for crypto. Avoid long wait times, transaction fees, and remain 100% anonymous. Mobile only.',
   },
   {
@@ -55,6 +58,7 @@ const displayRepos = [
     symbol: 'PP',
     site: 'https://www.plazekproperties.com',
     type: 'site',
+    order: 3,
     description: 'Real estate site built for Plazek Properties. Quickly search for available units and view pictures of properties.'
   },
   {
@@ -62,24 +66,28 @@ const displayRepos = [
     symbol: 'MGR',
     site: 'https://www.npmjs.com/package/mocha-grommet-reporter',
     type: 'npm',
+    order: 2,
     description: 'Custom web reporter plugin for the Mocha test framework. Designed to give visibility into the unit test metrics of various teams.',
   },
   {
     name: 'SNAKE',
     symbol: 'S',
     type: 'repo',
+    order: 6,
     description: 'Classic Snake game built in MIPS Assembly language.'
   },
   {
     name: 'plazek',
     symbol: 'ME',
     type: 'repo',
+    order: 4,
     description: 'The code for this website! Built using Gatsby and deployed using Netlify.'
   },
   {
     name: 'on-track',
     symbol: 'OT',
     type: 'repo',
+    order: 5,
     description: 'High definition train monitoring system and simulator built for use by the PAAC.'
   },
 ];
@@ -95,6 +103,7 @@ const getLanguages = compose(
 );
 
 const getRepositories = compose(
+  orderBy(['order'], ['asc']),
   map(item => {
     const record = find(displayRepos, ['name', item.name]);
     return {

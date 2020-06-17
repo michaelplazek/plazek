@@ -85,7 +85,7 @@ const Header = () => {
           <Fragment>
             <Box margin={{ left: 'large' }}>
               <Menu
-                icon={<MenuIcon size='large' color='black' />}
+                icon={<MenuIcon size='medium' color='black' />}
                 items={
                   links.map(link => ({
                     ...link,
