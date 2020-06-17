@@ -17,6 +17,10 @@ module.exports = {
         path: '/about',
         label: 'About',
       },
+      {
+        path: '/blog',
+        label: 'Blog',
+      },
     ],
   },
   plugins: [
