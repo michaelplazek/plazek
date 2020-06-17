@@ -14,9 +14,8 @@ export const aboutThisApplication = '';
 export default [
   {
     title: 'Application',
-    description: 'This application was built with React and Grommet. I\'ve grown to love React. It does an excellent job ' +
-      'of abstracting the DOM, allows you to structure your code base by function instead of language with JSX, and employs a ' +
-      'unidirectional data flow which makes managing your data lifecycle a breeze (usually). For the component library, I used Grommet. ' +
+    description: 'This application was built with React and Grommet. I\'ve got nothing but love for React. Excellent DOM abstraction, JSX, ' +
+      'hooks; what\'s not to love? For the component library, I used Grommet. ' +
       'Grommet is unopinionated and responsive; it makes building flexible UIs easy. It also has an awesome community behind it.',
     image: ApplicationGraphic,
   },
