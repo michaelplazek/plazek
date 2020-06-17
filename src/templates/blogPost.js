@@ -9,12 +9,12 @@ const Template = ({
 }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  console.log(html);
+  console.log(frontmatter);
   return (
     <PageContainer title={frontmatter.title}>
       <Box className="blog-post">
-        <Heading level={1}>{frontmatter.title}</Heading>
-        <Heading level={2}>{frontmatter.date}</Heading>
+        <Heading margin='none' level={1}>{frontmatter.title}</Heading>
+        <Heading margin='none' level={2} size='small'>{frontmatter.subtitle}</Heading>
         <Box
           dangerouslySetInnerHTML={{ __html: html }}
         />
@@ -33,6 +33,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        subtitle
       }
     }
   }
