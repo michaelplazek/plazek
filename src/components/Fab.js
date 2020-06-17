@@ -12,7 +12,7 @@ const fabStyle = (size, hovered) => ({
   ...rootStyle(size),
   borderRadius: '50%',
   border: '2px white solid',
-  background: !hovered ? 'black' : 'white',
+  background: !hovered ? 'white' : 'black',
   height: size !== 'small' ? '3em' : '2.5em',
   width: size !== 'small' ? '3em' : '2.5em',
   cursor: 'pointer'
@@ -38,7 +38,7 @@ const Fab = ({
         align='center'
         justify='center'
       >
-        <Terminal color={hovered ? 'black' : 'white'} />
+        <Terminal color={hovered ? 'white' : 'black'} />
       </Box>
     ) : <div />
   )
