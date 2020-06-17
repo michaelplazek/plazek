@@ -6,8 +6,6 @@ import PageContainer from "../components/PageContainer";
 const Blog = ({
   data: { allMarkdownRemark: { edges } }
 }) => {
-
-  console.log(edges);
   return (
     <PageContainer title='Blog'>
       <Heading size='small'>Some of my thoughts...</Heading>
