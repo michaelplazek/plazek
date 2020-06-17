@@ -26,7 +26,7 @@ const printPaths = (print, getLinks) => {
   links.forEach(({ path }) => print(path))
 };
 
-const logInvalidCommand = (print, command) => print(`Invalid command. Run \'${command} --help\' for more info.`);
+const logInvalidCommand = (print, command) => print(`Invalid command. Run '${command} --help' for more info.`);
 
 const goCommand = (args, print, getLinks) => {
   console.log(args);
