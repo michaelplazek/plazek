@@ -3,11 +3,11 @@ import App from "../app/App";
 import Header from "../components/Header";
 
 export default Component => {
-  const withAppHOC = () => {
+  const withAppHOC = (props) => {
     return (
-      <App>
+      <App {...props}>
         <Header />
-        <Component />
+        <Component {...props} />
       </App>
     );
   };

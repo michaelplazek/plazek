@@ -1,23 +1,30 @@
 import React from "react"
 import { graphql } from "gatsby"
-export default function Template({
+import { withApp } from "../HOCs";
+import PageContainer from "../components/PageContainer";
+import { Box, Heading } from "grommet";
+
+const Template = ({
   data,
-}) {
+}) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  console.log(html);
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
+    <PageContainer title={frontmatter.title}>
+      <Box className="blog-post">
+        <Heading level={1}>{frontmatter.title}</Heading>
+        <Heading level={2}>{frontmatter.date}</Heading>
+        <Box
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-    </div>
+      </Box>
+    </PageContainer>
   )
-}
+};
+
+export default withApp(Template);
+
 export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
@@ -29,4 +36,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
