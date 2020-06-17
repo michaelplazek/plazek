@@ -28,6 +28,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/blog-posts`,
+      },
+    },
+    {
       resolve: `gatsby-source-graphql`,
       options: {
         typeName: `GitHub`,
