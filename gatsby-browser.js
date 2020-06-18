@@ -1,5 +1,4 @@
 import "./src/app/global.css"
-import React from "react";
 
 /**
  * Since HTML is prerendered, need to wait until the JS

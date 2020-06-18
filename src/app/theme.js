@@ -44,6 +44,20 @@ const theme = {
       "large": {}
     }
   },
+  heading: {
+    level: {
+      "1": {
+        "medium": {
+          "maxWidth": "2000px"
+        },
+      },
+      "2": {
+        "small": {
+          "maxWidth": "800px"
+        },
+      }
+    }
+  },
 };
 
 export default merge(theme, grommet)
