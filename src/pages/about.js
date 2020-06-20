@@ -49,7 +49,7 @@ const About = () => {
   return (
     <PageContainer title='About'>
       <Box margin={{ vertical: 'medium' }}>
-        <Heading margin='none' level={2}>About me</Heading>
+        <Heading margin='none' level={1} size='small'>About me</Heading>
         <Box
           direction={size === 'small' ? 'column' : 'row'}
           align='center'

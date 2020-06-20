@@ -159,7 +159,7 @@ const Work = () => {
         fill={true}
         pad={{ vertical: 'small', horizontal: 'small' }}
       >
-        <Heading level={2}>Some things I've built on the side...</Heading>
+        <Heading level={1} size='small'>Some things I've built on the side...</Heading>
         <Grid
           gap='medium'
           columns={size !== 'small' ? 'medium' : undefined}
