@@ -5,12 +5,14 @@ import { StateProvider } from "./context";
 import theme from './theme';
 import { reducers, initialState } from "../state";
 
-const App = ({ children }) => (
-  <Grommet full={true} theme={theme}>
-    <StateProvider initialState={initialState} reducer={reducers}>
-      {children}
-    </StateProvider>
-  </Grommet>
-);
+const App = ({ children }) => {
+  return (
+    <Grommet full={true} theme={theme}>
+      <StateProvider initialState={initialState} reducer={reducers}>
+        {children}
+      </StateProvider>
+    </Grommet>
+  );
+};
 
 export default App;

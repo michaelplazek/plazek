@@ -62,6 +62,12 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
   ],
