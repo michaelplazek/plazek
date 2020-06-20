@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Michael Plazek`,
     description: `The portfolio of Michael Plazek`,
-    author: `@michaelplazek`,
+    author: `@plazekaas`,
     links: [
 
       {
