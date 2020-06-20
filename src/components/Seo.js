@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function Seo({ description, lang, meta, title }) {
+const Seo = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -69,10 +69,11 @@ function Seo({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+      <meta name="description" content="The homepage of Michael Plazek. Check out side projects, blog posts, and more."/>
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
     </Helmet>
   );
-}
+};
 
 Seo.defaultProps = {
   lang: `en`,

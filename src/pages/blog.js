@@ -12,7 +12,7 @@ const Blog = ({
 
   return (
     <PageContainer title='Blog'>
-      <Heading size='small'>Some of my thoughts...</Heading>
+      <Heading level={1} size='small'>Some of my thoughts...</Heading>
       {
         edges.length === 0 ? (
           <Box>

@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Michael Plazek`,
     description: `The portfolio of Michael Plazek`,
-    author: `@michaelplazek`,
+    author: `@plazekaas`,
+    siteUrl: `https://michaelplazek.com`,
     links: [
 
       {
@@ -70,5 +71,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sitemap`,
   ],
 };
