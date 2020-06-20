@@ -7,10 +7,7 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+        <meta name="google-site-verification" content="_BWE_k0AjSUH1fansc1lnn-EJ_wPA0KNrkCPQYipW1k" />
         {props.headComponents}
       </head>
       <body id='hide-content' {...props.bodyAttributes}>
