@@ -3,6 +3,7 @@ module.exports = {
     title: `Michael Plazek`,
     description: `The portfolio of Michael Plazek`,
     author: `@plazekaas`,
+    siteUrl: `https://michaelplazek.com`,
     links: [
 
       {
