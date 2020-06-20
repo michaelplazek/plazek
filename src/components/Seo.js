@@ -5,10 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { Box, Heading } from "grommet/es6";
 
 const Seo = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
@@ -28,50 +29,60 @@ const Seo = ({ description, lang, meta, title }) => {
   const metaDescription = description || site.siteMetadata.description;
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    >
-      <meta name="description" content="The homepage of Michael Plazek. Check out side projects, blog posts, and more."/>
-      <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
-    </Helmet>
+    <Fragment>
+      <Helmet
+        htmlAttributes={{
+          lang,
+        }}
+        title={title}
+        titleTemplate={`%s | ${site.siteMetadata.title}`}
+        meta={[
+          {
+            name: `description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:title`,
+            content: title,
+          },
+          {
+            property: `og:description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`,
+          },
+          {
+            name: `twitter:creator`,
+            content: site.siteMetadata.author,
+          },
+          {
+            name: `twitter:title`,
+            content: title,
+          },
+          {
+            name: `twitter:description`,
+            content: metaDescription,
+          },
+          {
+            name: `author`,
+            content: 'Michael Plazek',
+          },
+          {
+            name: `application-name`,
+            content: 'Michael Plazek',
+          },
+        ].concat(meta)}
+      >
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+      </Helmet>
+      <Heading level={1} style={{ position: 'absolute', height: '0px', visibility: 'hidden' }}>Michael Plazek</Heading>
+    </Fragment>
   );
 };
 

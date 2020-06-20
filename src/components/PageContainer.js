@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Box, ResponsiveContext } from "grommet";
+import { Box, Heading, ResponsiveContext } from "grommet";
 import Seo from "./Seo";
 import { needsFooterSupport } from "../utils/browser";
 
