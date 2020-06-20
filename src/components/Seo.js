@@ -69,7 +69,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
       ].concat(meta)}
     >
-      <meta name="description" content="The homepage of Michael Plazek. Check out side projects, blog post, and more."/>
+      <meta name="description" content="The homepage of Michael Plazek. Check out side projects, blog posts, and more."/>
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
     </Helmet>
   );
