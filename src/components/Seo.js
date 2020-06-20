@@ -9,7 +9,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import { Box, Heading } from "grommet/es6";
+import { Heading } from "grommet";
 
 const Seo = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
