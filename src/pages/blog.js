@@ -9,10 +9,21 @@ import PageContainer from "../components/PageContainer";
 import PostItem from "../components/PostItem";
 import SearchBar from "../components/SearchBar";
 
-const isMatch = (searchText, value) => value.toUpperCase().includes(searchText.toUpperCase());
+const getTags = tags => tags.split(', ');
+const isStringMatch = (searchText, value) => value.toUpperCase().includes(searchText.toUpperCase());
+const isTagMatch = (searchText, tags) => {
+  let flag = false;
+  tags.forEach(item => {
+    if (isStringMatch(searchText, item)) {
+      flag = true;
+    }
+  });
+  return flag;
+};
+const isTextMatch = (searchText, item) => (isStringMatch(searchText, item.title) || isStringMatch(searchText, item.date));
 const filterPosts = (edges, searchText) => compose(
-  filter(item => (isMatch(searchText, item.title) || isMatch(searchText, item.date))),
-  map(({ node: { frontmatter }}) => frontmatter)
+  filter(item => (isTextMatch(searchText, item) || isTagMatch(searchText, item.tags))),
+  map(({ node: { frontmatter }}) => ({ ...frontmatter, tags: getTags(frontmatter.tags) }))
 )(edges);
 
 const Blog = ({
@@ -31,7 +42,7 @@ const Blog = ({
             const { target: { value } } = e;
             setSearchText(value);
           }}
-          placeholder='Search by title or date...'
+          placeholder='Search by title, tag, or date...'
         />
       </Box>
       {
@@ -63,6 +74,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            tags
             slug
           }
         }
