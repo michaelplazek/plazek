@@ -37,6 +37,23 @@ const PostItem = ({ item }) => {
         </Heading>
         <Text size='small'>{item.date}</Text>
       </Box>
+      <Box margin={{ top: 'small' }} direction='row' gap='small' wrap={true}>
+        {item.tags.map(item => (
+          <Box
+            key={item}
+            background='#2194f3'
+            round={true}
+            pad={{ vertical: 'xsmall', horizontal: 'small' }}
+            margin={{ vertical: 'xsmall' }}
+            align='center'
+            justify='center'
+          >
+            <Text size='small'>
+              {item}
+            </Text>
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

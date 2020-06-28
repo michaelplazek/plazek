@@ -9,10 +9,11 @@ import PageContainer from "../components/PageContainer";
 import PostItem from "../components/PostItem";
 import SearchBar from "../components/SearchBar";
 
+const getTags = tags => tags.split(', ');
 const isMatch = (searchText, value) => value.toUpperCase().includes(searchText.toUpperCase());
 const filterPosts = (edges, searchText) => compose(
   filter(item => (isMatch(searchText, item.title) || isMatch(searchText, item.date))),
-  map(({ node: { frontmatter }}) => frontmatter)
+  map(({ node: { frontmatter }}) => ({ ...frontmatter, tags: getTags(frontmatter.tags) }))
 )(edges);
 
 const Blog = ({
@@ -21,6 +22,8 @@ const Blog = ({
 
   const [searchText, setSearchText] = useState('');
   const posts = filterPosts(edges, searchText);
+
+  console.log(posts);
 
   return (
     <PageContainer title='Blog'>
@@ -63,6 +66,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            tags
             slug
           }
         }
