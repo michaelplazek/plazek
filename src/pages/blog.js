@@ -1,18 +1,39 @@
-import React, { useState, useContext } from "react";
-import { graphql, navigate } from "gatsby";
-import { Box, Heading, ResponsiveContext, Text } from "grommet";
+import React, { useState } from "react";
+import { graphql } from "gatsby";
+import { Box, Heading } from "grommet";
+import compose from 'lodash/fp/compose';
+import map from 'lodash/fp/map';
+import filter from 'lodash/fp/filter';
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
+import PostItem from "../components/PostItem";
+import SearchBar from "../components/SearchBar";
+
+const isMatch = (searchText, value) => value.toUpperCase().includes(searchText.toUpperCase());
+const filterPosts = (edges, searchText) => compose(
+  filter(item => (isMatch(searchText, item.title) || isMatch(searchText, item.date))),
+  map(({ node: { frontmatter }}) => frontmatter)
+)(edges);
+
 const Blog = ({
   data: { allMarkdownRemark: { edges } }
 }) => {
 
-  const [hovered, setHovered] = useState(false);
-  const size = useContext(ResponsiveContext);
+  const [searchText, setSearchText] = useState('');
+  const posts = filterPosts(edges, searchText);
 
   return (
     <PageContainer title='Blog'>
       <Heading level={1} size='small'>Some of my thoughts...</Heading>
+      <Box margin={{ left: 'medium', bottom: 'small' }} width='large'>
+        <SearchBar
+          onChange={(e) => {
+            const { target: { value } } = e;
+            setSearchText(value);
+          }}
+          placeholder='Search by title or date...'
+        />
+      </Box>
       {
         edges.length === 0 ? (
           <Box>
@@ -20,30 +41,8 @@ const Blog = ({
           </Box>
         ) : (
           <Box margin='small' gap='small'>
-            {edges.map(({ node: { frontmatter }}) => (
-              <Box
-                pad='medium'
-                background='light-1'
-                round='small'
-                elevation={hovered ? 'medium' : 'none'}
-                key={frontmatter.title}
-                onMouseOver={() => setHovered(true)}
-                onFocus={() => setHovered(true)}
-                onMouseOut={() => setHovered(false)}
-                onBlur={() => setHovered(false)}
-                style={{ cursor: 'pointer' }}
-                onClick={() => navigate(frontmatter.slug)}
-              >
-                <Box
-                  fill='horizontal'
-                  direction={size !== 'small' ? 'row' : 'column'}
-                  justify='between'
-                  align={size !== 'small' ? 'center' : 'start'}
-                >
-                  <Heading alignSlef='stretch' margin='none' level={2} size='small'>{frontmatter.title}</Heading>
-                  <Text size='small'>{frontmatter.date}</Text>
-                </Box>
-              </Box>
+            {posts.map(item => (
+              <PostItem key={item.title} item={item} />
             ))}
           </Box>
         )
