@@ -10,9 +10,19 @@ import PostItem from "../components/PostItem";
 import SearchBar from "../components/SearchBar";
 
 const getTags = tags => tags.split(', ');
-const isMatch = (searchText, value) => value.toUpperCase().includes(searchText.toUpperCase());
+const isStringMatch = (searchText, value) => value.toUpperCase().includes(searchText.toUpperCase());
+const isTagMatch = (searchText, tags) => {
+  let flag = false;
+  tags.forEach(item => {
+    if (isStringMatch(searchText, item)) {
+      flag = true;
+    }
+  });
+  return flag;
+};
+const isTextMatch = (searchText, item) => (isStringMatch(searchText, item.title) || isStringMatch(searchText, item.date));
 const filterPosts = (edges, searchText) => compose(
-  filter(item => (isMatch(searchText, item.title) || isMatch(searchText, item.date))),
+  filter(item => (isTextMatch(searchText, item) || isTagMatch(searchText, item.tags))),
   map(({ node: { frontmatter }}) => ({ ...frontmatter, tags: getTags(frontmatter.tags) }))
 )(edges);
 
@@ -23,8 +33,6 @@ const Blog = ({
   const [searchText, setSearchText] = useState('');
   const posts = filterPosts(edges, searchText);
 
-  console.log(posts);
-
   return (
     <PageContainer title='Blog'>
       <Heading level={1} size='small'>Some of my thoughts...</Heading>
@@ -34,7 +42,7 @@ const Blog = ({
             const { target: { value } } = e;
             setSearchText(value);
           }}
-          placeholder='Search by title or date...'
+          placeholder='Search by title, tag, or date...'
         />
       </Box>
       {
