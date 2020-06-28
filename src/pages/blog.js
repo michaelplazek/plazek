@@ -1,14 +1,13 @@
-import React, { useState, useContext } from "react";
-import { graphql, navigate } from "gatsby";
-import { Box, Heading, ResponsiveContext, Text } from "grommet";
+import React from "react";
+import { graphql } from "gatsby";
+import { Box, Heading } from "grommet";
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
+import PostItem from "../components/PostItem";
+
 const Blog = ({
   data: { allMarkdownRemark: { edges } }
 }) => {
-
-  const [hovered, setHovered] = useState(false);
-  const size = useContext(ResponsiveContext);
 
   return (
     <PageContainer title='Blog'>
@@ -21,29 +20,7 @@ const Blog = ({
         ) : (
           <Box margin='small' gap='small'>
             {edges.map(({ node: { frontmatter }}) => (
-              <Box
-                pad='medium'
-                background='light-1'
-                round='small'
-                elevation={hovered ? 'medium' : 'none'}
-                key={frontmatter.title}
-                onMouseOver={() => setHovered(true)}
-                onFocus={() => setHovered(true)}
-                onMouseOut={() => setHovered(false)}
-                onBlur={() => setHovered(false)}
-                style={{ cursor: 'pointer' }}
-                onClick={() => navigate(frontmatter.slug)}
-              >
-                <Box
-                  fill='horizontal'
-                  direction={size !== 'small' ? 'row' : 'column'}
-                  justify='between'
-                  align={size !== 'small' ? 'center' : 'start'}
-                >
-                  <Heading alignSlef='stretch' margin='none' level={2} size='small'>{frontmatter.title}</Heading>
-                  <Text size='small'>{frontmatter.date}</Text>
-                </Box>
-              </Box>
+              <PostItem frontmatter={frontmatter} />
             ))}
           </Box>
         )
