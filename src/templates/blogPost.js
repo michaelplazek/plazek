@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
-import { Box, Heading, ResponsiveContext, Text } from "grommet";
+import { Box, Heading, Text } from "grommet";
 import { Previous as PreviousIcon } from 'grommet-icons';
 
 const Template = ({
@@ -10,8 +10,6 @@ const Template = ({
 }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-
-  const size = useContext(ResponsiveContext);
 
   return (
     <PageContainer title={frontmatter.title}>
