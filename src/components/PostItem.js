@@ -27,7 +27,14 @@ const PostItem = ({ item }) => {
         justify='between'
         align={size !== 'small' ? 'center' : 'start'}
       >
-        <Heading alignSlef='stretch' margin='none' level={2} size='small'>{item.title}</Heading>
+        <Heading
+          alignSlef='stretch'
+          margin={size !== 'small' ? 'none' : { bottom: 'small' }}
+          level={2}
+          size='small'
+        >
+          {item.title}
+        </Heading>
         <Text size='small'>{item.date}</Text>
       </Box>
     </Box>
