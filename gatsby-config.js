@@ -69,8 +69,21 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
   ],
 };
