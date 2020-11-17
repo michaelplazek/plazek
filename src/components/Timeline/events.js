@@ -19,6 +19,7 @@ const locations = {
 };
 
 const tags = {
+  ARCHITECTURE: 'Architecture',
   ENGINEERING: 'Engineering',
   FRONT_END: 'Front End',
   BACK_END: 'Back End',
@@ -37,7 +38,16 @@ export default [
   {
     type: eventTypes.WORK,
     date: '2020 - Present',
-    title: 'Systems Software Engineer 2',
+    title: 'Front End Software Engineer V',
+    subtitle: 'Hewlett Packard Enterprise',
+    location: locations.COLORADO,
+    tags: [tags.FRONT_END, tags.ARCHITECTURE, tags.USER_EXPERIENCE, tags.LEADERSHIP],
+    icon: iconMap[eventTypes.WORK]
+  },
+  {
+    type: eventTypes.WORK,
+    date: '2020',
+    title: 'Front End Software Engineer II',
     subtitle: 'Hewlett Packard Enterprise',
     location: locations.COLORADO,
     tags: [tags.FRONT_END, tags.USER_EXPERIENCE, tags.DESIGN, tags.LEADERSHIP],
@@ -46,7 +56,7 @@ export default [
   {
     type: eventTypes.WORK,
     date: '2018 - 2020',
-    title: 'Systems Software Engineer 1',
+    title: 'Front End Software Engineer I',
     subtitle: 'Hewlett Packard Enterprise',
     location: locations.COLORADO,
     tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE, tags.LEADERSHIP],
