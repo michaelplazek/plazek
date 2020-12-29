@@ -29,7 +29,6 @@ const WorkWidget = ({
       elevation={hovered ? 'medium' : 'none'}
       background='light-1'
       pad='medium'
-      fill='vertical'
       onMouseOver={() => setHovered(true)}
       onFocus={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
@@ -39,23 +38,21 @@ const WorkWidget = ({
       justify='between'
     >
       <Box>
-      <Box
-        direction='row'
-        justify='between'
-        align='center'
-      >
-        <Box>
-          <Heading level={3} margin='none'>{name}</Heading>
+        <Box
+          direction='row'
+          justify='between'
+          align='center'
+        >
+          <Box>
+            <Heading level={3} margin='none'>{name}</Heading>
+          </Box>
+          <Box>
+            { React.createElement(icon, { color: 'black', size: '1.5em', key: uniqueId() }) }
+          </Box>
         </Box>
-        <Box>
-          { React.createElement(icon, { color: 'black', size: '1.5em', key: uniqueId() }) }
-        </Box>
-      </Box>
-      <Box margin={{ vertical: 'medium' }}>
-        <Box>
+        <Box margin={{ vertical: 'medium' }}>
           <Text>{description}</Text>
         </Box>
-      </Box>
       </Box>
       <Box>
         <LanguageMeter languages={languages} />
