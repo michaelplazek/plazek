@@ -83,7 +83,7 @@ const displayRepos = [
     type: "repo",
     order: 4,
     description:
-      "The code for this website! Built using Gatsby and deployed using Netlify.",
+      "Code for this website! Built using Gatsby and deployed using Netlify.",
   },
   {
     name: "on-track",
@@ -92,6 +92,14 @@ const displayRepos = [
     order: 5,
     description:
       "High definition train monitoring system and simulator built for use by the PAAC.",
+  },
+  {
+    name: "github-repo-app",
+    symbol: "GRA",
+    type: "repo",
+    order: 6,
+    description:
+      "Little app to display the commit for a given repo in a feed.",
   },
 ];
 
