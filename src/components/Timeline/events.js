@@ -32,8 +32,22 @@ const iconMap = {
 export default [
   {
     type: eventTypes.WORK,
-    date: "2020 - Present",
-    title: "Front End Software Engineer V",
+    date: "2021 - PRESENT",
+    title: "Technical Lead",
+    subtitle: "Hewlett Packard Enterprise",
+    location: locations.COLORADO,
+    tags: [
+      tags.FRONT_END,
+      tags.ARCHITECTURE,
+      tags.ENGINEERING,
+      tags.LEADERSHIP,
+    ],
+    icon: iconMap[eventTypes.WORK],
+  },
+  {
+    type: eventTypes.WORK,
+    date: "2020 - 2021",
+    title: "Senior Front End Engineer",
     subtitle: "Hewlett Packard Enterprise",
     location: locations.COLORADO,
     tags: [
@@ -50,7 +64,7 @@ export default [
     title: "Front End Software Engineer II",
     subtitle: "Hewlett Packard Enterprise",
     location: locations.COLORADO,
-    tags: [tags.FRONT_END, tags.USER_EXPERIENCE, tags.DESIGN, tags.LEADERSHIP],
+    tags: [tags.FRONT_END, tags.USER_EXPERIENCE, tags.DESIGN],
     icon: iconMap[eventTypes.WORK],
   },
   {
@@ -63,7 +77,6 @@ export default [
       tags.FRONT_END,
       tags.BACK_END,
       tags.USER_EXPERIENCE,
-      tags.LEADERSHIP,
     ],
     icon: iconMap[eventTypes.WORK],
   },
