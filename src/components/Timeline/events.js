@@ -32,7 +32,7 @@ const iconMap = {
 export default [
   {
     type: eventTypes.WORK,
-    date: "2021 - PRESENT",
+    date: "2021 - Present",
     title: "Technical Lead",
     subtitle: "Hewlett Packard Enterprise",
     location: locations.COLORADO,

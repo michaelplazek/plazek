@@ -23,10 +23,9 @@ import PageContainer from "../components/PageContainer";
 import face from "../images/face.jpg";
 import { use, know, play } from "../constants/icons";
 import { getImageStyle } from "../utils";
-import site, { aboutMe, aboutThisApplication } from "../constants/site";
+import { aboutMe } from "../constants/site";
 
 import Timeline from "../components/Timeline";
-import InfoTile from "../components/InfoTile";
 
 const contact = [
   {
