@@ -20,7 +20,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return
+    return;
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
@@ -29,6 +29,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         slug: node.frontmatter.slug,
       },
-    })
-  })
+    });
+  });
 };

@@ -5,22 +5,21 @@ module.exports = {
     author: `@plazekaas`,
     siteUrl: `https://michaelplazek.com`,
     links: [
-
       {
-        path: '/',
-        label: 'Home',
+        path: "/",
+        label: "Home",
       },
       {
-        path: '/work',
-        label: 'Work',
+        path: "/work",
+        label: "Work",
       },
       {
-        path: '/about',
-        label: 'About',
+        path: "/about",
+        label: "About",
       },
       {
-        path: '/blog',
-        label: 'Blog',
+        path: "/blog",
+        label: "Blog",
       },
     ],
   },

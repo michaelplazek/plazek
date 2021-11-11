@@ -1,13 +1,13 @@
 export const state = {
-  theme: 'green'
+  theme: "green",
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case 'changeTheme':
+    case "changeTheme":
       return {
         ...state,
-        theme: action.theme
+        theme: action.theme,
       };
 
     default:

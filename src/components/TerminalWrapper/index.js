@@ -1,15 +1,12 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Terminal from 'terminal-in-react';
+import Terminal from "terminal-in-react";
 
-import get from 'lodash/get';
+import get from "lodash/get";
 
-import { commands, descriptions } from './commands';
+import { commands, descriptions } from "./commands";
 
-const TerminalWrapper = ({
-  setTerminal
-}) => {
-
+const TerminalWrapper = ({ setTerminal }) => {
   const siteData = useStaticQuery(graphql`
     query PathQuery {
       site {
@@ -23,15 +20,15 @@ const TerminalWrapper = ({
     }
   `);
 
-  const getLinks = () => get(siteData, 'site.siteMetadata.links');
+  const getLinks = () => get(siteData, "site.siteMetadata.links");
 
   return (
     <Terminal
-      color='white'
-      backgroundColor='black'
-      prompt='white'
-      barColor='black'
-      promptSymbol='$'
+      color="white"
+      backgroundColor="black"
+      prompt="white"
+      barColor="black"
+      promptSymbol="$"
       hideTopBar={true}
       allowTabs={false}
       style={{ fontSize: "1em" }}

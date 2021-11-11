@@ -1,15 +1,15 @@
 import React from "react";
-import {Box} from 'grommet';
+import { Box } from "grommet";
 
 import App from "../app/App";
 import Header from "../components/Header";
 
 export default Component => {
-  const withAppHOC = (props) => {
+  const withAppHOC = props => {
     return (
       <App {...props}>
         <Header />
-          <Component {...props} />
+        <Component {...props} />
       </App>
     );
   };

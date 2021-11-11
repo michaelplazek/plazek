@@ -4,30 +4,24 @@ import Seo from "./Seo";
 import { needsFooterSupport } from "../utils/browser";
 
 const PageContainer = ({ children, background, title }) => {
-
   const [addFooter, setAddFooter] = useState(false);
   const size = useContext(ResponsiveContext);
   useEffect(() => {
     setAddFooter(needsFooterSupport());
-  },[size]);
+  }, [size]);
 
   return (
-    <Box
-      background={background}
-      pad={{ horizontal: 'medium' }}
-    >
+    <Box background={background} pad={{ horizontal: "medium" }}>
       <Seo title={title} />
       <Box
-        style={{ transform: 'translateY(100px)' }}
-        margin={{ horizontal: 'medium',  bottom: 'medium' }}
-        overflow='hidden'
-        align='center'
+        style={{ transform: "translateY(100px)" }}
+        margin={{ horizontal: "medium", bottom: "medium" }}
+        overflow="hidden"
+        align="center"
       >
-        <Box width='1400px'>
-          {children}
-        </Box>
+        <Box width="1400px">{children}</Box>
       </Box>
-      <div style={{ height: addFooter ? '240px': '40px' }}/>
+      <div style={{ height: addFooter ? "240px" : "40px" }} />
     </Box>
   );
 };
