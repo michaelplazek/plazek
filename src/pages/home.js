@@ -1,11 +1,7 @@
 import React, { useContext, useState } from "react";
-import posed from 'react-pose';
+import posed from "react-pose";
 
-import {
-  ResponsiveContext,
-  Heading,
-  Box,
-} from "grommet";
+import { ResponsiveContext, Heading, Box } from "grommet";
 
 import { GRADIENT, INVERSE } from "../constants/colors";
 import Fab from "../components/Fab";
@@ -19,83 +15,79 @@ const AppearTransition = posed.div({
 });
 
 const Home = () => {
-
   const size = useContext(ResponsiveContext);
   const [hasTerminal, setTerminal] = useState(false);
 
   return (
-    <Box
-      fill='vertical'
-      style={GRADIENT}
-    >
+    <Box fill="vertical" style={GRADIENT}>
       <Seo title="Home" />
-      <Box
-        fill='vertical'
-        style={INVERSE}
-        align='center'
-        justify='center'
-      >
+      <Box fill="vertical" style={INVERSE} align="center" justify="center">
         <Box
           // fill='vertical'
           // justify='center'
-          align='center'
-          style={hasTerminal ? { position: 'relative', bottom: '20vh' } : {}}
-          direction={!isSmall(size) ? 'row' : 'column'}
-          gap={!isSmall(size) ? 'large' : 'none'}
+          align="center"
+          style={hasTerminal ? { position: "relative", bottom: "20vh" } : {}}
+          direction={!isSmall(size) ? "row" : "column"}
+          gap={!isSmall(size) ? "large" : "none"}
         >
           <Box>
-            <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
-              <Heading margin='none' size='xlarge'>
+            <AppearTransition pose={!hasTerminal ? "visible" : "hidden"}>
+              <Heading margin="none" size="xlarge">
                 UI / UX
               </Heading>
             </AppearTransition>
-            {
-              ((size === 'small' && !hasTerminal) || (size !== 'small')) && (
-                <Heading margin='none' size='xlarge'>
-                  UI / UX
-                </Heading>
-              )
-            }
-            <AppearTransition pose={!hasTerminal ? 'visible' : 'hidden'}>
-              <Heading margin='none' size='xlarge'>
+            {((size === "small" && !hasTerminal) || size !== "small") && (
+              <Heading margin="none" size="xlarge">
+                UI / UX
+              </Heading>
+            )}
+            <AppearTransition pose={!hasTerminal ? "visible" : "hidden"}>
+              <Heading margin="none" size="xlarge">
                 UI / UX
               </Heading>
             </AppearTransition>
           </Box>
           <Box
-            style={(() => (
-              (size !== 'small' && !hasTerminal) ? {
-                position: 'relative',
-                top: "1.55em"
-              } : {
-                position: 'absolute',
-                top: '70vh',
-              }
-            ))()}
+            style={(() =>
+              size !== "small" && !hasTerminal
+                ? {
+                    position: "relative",
+                    top: "1.55em",
+                  }
+                : {
+                    position: "absolute",
+                    top: "70vh",
+                  })()}
           >
-            <Heading margin='none' level={2}>DEVELOPER</Heading>
+            <Heading margin="none" level={2}>
+              DEVELOPER
+            </Heading>
           </Box>
         </Box>
       </Box>
       <Fab onClick={() => setTerminal(!hasTerminal)} />
       {hasTerminal && (
         <Box
-          fill='horizontal'
+          fill="horizontal"
           style={{
-            position: 'absolute',
-            bottom: '0px',
-            width: '100vw',
+            position: "absolute",
+            bottom: "0px",
+            width: "100vw",
           }}
         >
-          {
-            size === 'small' && (
-              <Box justify='center' margin={{ vertical: 'large' }} direction='row' gap='small' align='center'>
-                <Heading color='black' margin='none' size='large'>
-                  UI / UX
-                </Heading>
-              </Box>
-            )
-          }
+          {size === "small" && (
+            <Box
+              justify="center"
+              margin={{ vertical: "large" }}
+              direction="row"
+              gap="small"
+              align="center"
+            >
+              <Heading color="black" margin="none" size="large">
+                UI / UX
+              </Heading>
+            </Box>
+          )}
 
           <TerminalWrapper setTerminal={setTerminal} />
         </Box>

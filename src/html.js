@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function HTML(props) {
   return (
@@ -7,10 +7,13 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="google-site-verification" content="_BWE_k0AjSUH1fansc1lnn-EJ_wPA0KNrkCPQYipW1k" />
+        <meta
+          name="google-site-verification"
+          content="_BWE_k0AjSUH1fansc1lnn-EJ_wPA0KNrkCPQYipW1k"
+        />
         {props.headComponents}
       </head>
-      <body id='hide-content' {...props.bodyAttributes}>
+      <body id="hide-content" {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -20,7 +23,7 @@ export default function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {

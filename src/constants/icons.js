@@ -20,148 +20,140 @@ import {
   DiJqueryLogo as JQueryIcon,
   DiGulp as GulpIcon,
   DiUnitySmall as UnityIcon,
-  DiSass as SassIcon
-} from 'react-icons/di';
-import {
-  RiGatsbyLine as GatsbyIcon,
-} from 'react-icons/ri';
-import {
-  GrGraphQl as GraphQlIcon,
-} from 'react-icons/gr';
+  DiSass as SassIcon,
+} from "react-icons/di";
+import { RiGatsbyLine as GatsbyIcon } from "react-icons/ri";
+import { GrGraphQl as GraphQlIcon } from "react-icons/gr";
 import {
   FaJava as JavaIcon,
   FaNodeJs as NodeIcon,
   FaDocker as DockerIcon,
-  FaVuejs as VueIcon
-} from 'react-icons/fa';
-import {
-  GrGrommet as GrommetIcon,
-} from 'react-icons/gr';
-import {
-  FiFigma as FigmaIcon,
-} from 'react-icons/fi';
+  FaVuejs as VueIcon,
+} from "react-icons/fa";
+import { GrGrommet as GrommetIcon } from "react-icons/gr";
+import { FiFigma as FigmaIcon } from "react-icons/fi";
 
 export const use = [
   {
-    name: 'React',
-    icon: ReactIcon
+    name: "React",
+    icon: ReactIcon,
   },
   {
-    name: 'Redux',
-    icon: ReduxIcon
+    name: "Gatsby",
+    icon: GatsbyIcon,
   },
   {
-    name: 'Gatsby',
-    icon: GatsbyIcon
+    name: "JavaScript",
+    icon: JsIcon,
   },
   {
-    name: 'JavaScript',
-    icon: JsIcon
+    name: "TypeScript",
+    icon: TypescriptIcon,
   },
   {
-    name: 'Grommet',
-    icon: GrommetIcon
+    name: "Grommet",
+    icon: GrommetIcon,
   },
   {
-    name: 'AWS',
-    icon: AwsIcon
+    name: "AWS",
+    icon: AwsIcon,
   },
   {
-    name: 'GraphQL',
-    icon: GraphQlIcon
+    name: "GraphQL",
+    icon: GraphQlIcon,
   },
   {
-    name: 'Webpack',
-    icon: WebpackIcon
+    name: "Webpack",
+    icon: WebpackIcon,
   },
   {
-    name: 'CSS',
-    icon: CssIcon
+    name: "CSS",
+    icon: CssIcon,
   },
   {
-    name: 'Babel',
-    icon: BabelIcon
+    name: "Babel",
+    icon: BabelIcon,
   },
   {
-    name: 'Node',
-    icon: NodeIcon
+    name: "Node",
+    icon: NodeIcon,
   },
   {
-    name: 'Terraform',
-    icon: TerraformIcon
+    name: "Terraform",
+    icon: TerraformIcon,
   },
   {
-    name: 'Serverless',
-    icon: LambdaIcon
+    name: "Serverless",
+    icon: LambdaIcon,
   },
   {
-    name: 'Netlify',
-    icon: NetlifyIcon
+    name: "Netlify",
+    icon: NetlifyIcon,
   },
 ];
 
 export const know = [
   {
-    name: 'Java',
-    icon: JavaIcon
+    name: "Java",
+    icon: JavaIcon,
   },
   {
-    name: 'Go',
-    icon: GolangIcon
+    name: "Go",
+    icon: GolangIcon,
   },
   {
-    name: 'Kubernetes',
-    icon: KubernetesIcon
+    name: "Kubernetes",
+    icon: KubernetesIcon,
   },
   {
-    name: 'Docker',
-    icon: DockerIcon
+    name: "Docker",
+    icon: DockerIcon,
   },
   {
-    name: 'Figma',
-    icon: FigmaIcon
+    name: "Figma",
+    icon: FigmaIcon,
   },
   {
-    name: 'JQuery',
-    icon: JQueryIcon
+    name: "JQuery",
+    icon: JQueryIcon,
   },
   {
-    name: 'Gulp',
-    icon: GulpIcon
+    name: "Gulp",
+    icon: GulpIcon,
   },
   {
-    name: 'MaterialUI',
-    icon: MaterialUiIcon
+    name: "MaterialUI",
+    icon: MaterialUiIcon,
+  },
+  {
+    name: "Redux",
+    icon: ReduxIcon,
   },
 ];
 
 export const play = [
   {
-    name: 'FramerX',
-    icon: FramerIcon
+    name: "FramerX",
+    icon: FramerIcon,
   },
   {
-    name: 'Python',
-    icon: PythonIcon
+    name: "Python",
+    icon: PythonIcon,
   },
   {
-    name: 'Angular',
-    icon: AngularIcon
+    name: "Angular",
+    icon: AngularIcon,
   },
   {
-    name: 'Vue',
-    icon: VueIcon
+    name: "Vue",
+    icon: VueIcon,
   },
   {
-    name: 'TypeScript',
-    icon: TypescriptIcon
+    name: "Unity",
+    icon: UnityIcon,
   },
   {
-    name: 'Unity',
-    icon: UnityIcon
-  },
-  {
-    name: 'Sass',
-    icon: SassIcon
+    name: "Sass",
+    icon: SassIcon,
   },
 ];

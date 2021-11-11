@@ -5,6 +5,5 @@ export const initialState = {
 };
 
 export const reducers = ({ app }, action) => ({
-  app: appReducer(app, action)
+  app: appReducer(app, action),
 });
-

@@ -1,13 +1,11 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import React from "react";
+import { graphql, Link } from "gatsby";
 import { withApp } from "../HOCs";
 import PageContainer from "../components/PageContainer";
 import { Box, Heading, Text } from "grommet";
-import { Previous as PreviousIcon } from 'grommet-icons';
+import { Previous as PreviousIcon } from "grommet-icons";
 
-const Template = ({
-  data,
-}) => {
+const Template = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
@@ -15,40 +13,34 @@ const Template = ({
     <PageContainer title={frontmatter.title}>
       <Box>
         <Box
-          direction='row'
-          align='center'
-          gap='small'
-          margin={{ bottom: 'medium' }}
+          direction="row"
+          align="center"
+          gap="small"
+          margin={{ bottom: "medium" }}
         >
-          <PreviousIcon
-            color='black'
-            size='small'
-          />
+          <PreviousIcon color="black" size="small" />
           <Text>
             <Link
-              to='/blog'
+              to="/blog"
               style={{
-                textDecoration: 'none',
-                color: 'black',
+                textDecoration: "none",
+                color: "black",
               }}
             >
               Back
             </Link>
           </Text>
         </Box>
-        <Box
-          gap='small'
-          fill='horizontal'
-          >
-          <Heading margin='none' level={1}>{frontmatter.title}</Heading>
+        <Box gap="small" fill="horizontal">
+          <Heading margin="none" level={1}>
+            {frontmatter.title}
+          </Heading>
           <Text>{frontmatter.date}</Text>
         </Box>
-        <Box
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <Box dangerouslySetInnerHTML={{ __html: html }} />
       </Box>
     </PageContainer>
-  )
+  );
 };
 
 export default withApp(Template);

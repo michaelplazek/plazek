@@ -71,17 +71,25 @@ const Seo = ({ description, lang, meta, title }) => {
           },
           {
             name: `author`,
-            content: 'Michael Plazek',
+            content: "Michael Plazek",
           },
           {
             name: `application-name`,
-            content: 'Michael Plazek',
+            content: "Michael Plazek",
           },
         ].concat(meta)}
       >
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+        />
       </Helmet>
-      <Heading level={1} style={{ position: 'absolute', height: '0px', visibility: 'hidden' }}>Michael Plazek</Heading>
+      <Heading
+        level={1}
+        style={{ position: "absolute", height: "0px", visibility: "hidden" }}
+      >
+        Michael Plazek
+      </Heading>
     </Fragment>
   );
 };

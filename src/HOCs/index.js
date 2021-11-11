@@ -1,1 +1,1 @@
-export { default as withApp } from './withApp';
+export { default as withApp } from "./withApp";
