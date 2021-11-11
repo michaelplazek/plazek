@@ -21,8 +21,11 @@ const PageContainer = ({ children, background, title }) => {
         style={{ transform: 'translateY(100px)' }}
         margin={{ horizontal: 'medium',  bottom: 'medium' }}
         overflow='hidden'
+        align='center'
       >
-        {children}
+        <Box width='1400px'>
+          {children}
+        </Box>
       </Box>
       <div style={{ height: addFooter ? '240px': '40px' }}/>
     </Box>

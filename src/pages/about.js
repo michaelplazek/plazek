@@ -51,6 +51,7 @@ const About = () => {
       <Box margin={{ vertical: 'medium' }}>
         <Heading margin='none' level={1} size='small'>About me</Heading>
         <Box
+          fill={true}
           direction={size === 'small' ? 'column' : 'row'}
           align='center'
         >
@@ -201,7 +202,7 @@ const About = () => {
       </Box>
       <Box
         background='light-1'
-        margin={{ top: 'large' }}
+        margin={{ top: 'large', bottom: 'medium' }}
         pad='medium'
         round={true}
       >

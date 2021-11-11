@@ -47,10 +47,6 @@ export const use = [
     icon: ReactIcon
   },
   {
-    name: 'Redux',
-    icon: ReduxIcon
-  },
-  {
     name: 'Gatsby',
     icon: GatsbyIcon
   },
@@ -136,6 +132,10 @@ export const know = [
   {
     name: 'MaterialUI',
     icon: MaterialUiIcon
+  },
+  {
+    name: 'Redux',
+    icon: ReduxIcon
   },
 ];
 
