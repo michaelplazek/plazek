@@ -1,5 +1,14 @@
 import React, { useContext } from "react";
-import { Anchor, Box, Grid, Heading, ResponsiveContext, Text } from "grommet";
+import {
+  Anchor,
+  Box,
+  Grid,
+  Heading,
+  ResponsiveContext,
+  Paragraph,
+  Text,
+  Markdown,
+} from "grommet";
 import uniqueId from "lodash/uniqueId";
 
 import {
@@ -53,7 +62,9 @@ const About = () => {
           align="center"
         >
           <Box pad={{ vertical: "small" }} basis="3/4">
-            <Text>{aboutMe}</Text>
+            <Markdown components={{ p: (props) => <Paragraph {...props} fill/> }}>
+              {aboutMe}
+            </Markdown>
             <Box
               direction="row"
               gap="medium"
@@ -147,7 +158,7 @@ const About = () => {
       </Grid>
       <Box
         background="light-1"
-        margin={{ top: "large" }}
+        margin={{ top: "large", bottom: 'medium' }}
         pad="medium"
         round={true}
       >
@@ -165,25 +176,6 @@ const About = () => {
           </Heading>
         </Box>
         <Timeline />
-      </Box>
-      <Box
-        background="light-1"
-        margin={{ top: "large", bottom: "medium" }}
-        pad="medium"
-        round={true}
-      >
-        <Box margin={{ bottom: "small", horizontal: "medium" }}>
-          <Heading level={2}>About this site</Heading>
-          <Text margin="none">{aboutThisApplication}</Text>
-        </Box>
-        {site.map(item => (
-          <InfoTile
-            key={uniqueId()}
-            title={item.title}
-            description={item.description}
-            image={item.image}
-          />
-        ))}
       </Box>
     </PageContainer>
   );
