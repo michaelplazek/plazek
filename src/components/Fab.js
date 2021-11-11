@@ -6,6 +6,7 @@ const rootStyle = size => ({
   position: "fixed",
   bottom: size !== "small" ? "3em" : "1.5em",
   right: size !== "small" ? "3em" : "1.5em",
+  zIndex: 1000
 });
 
 const fabStyle = (size, hovered) => ({
@@ -18,11 +19,11 @@ const fabStyle = (size, hovered) => ({
   cursor: "pointer",
 });
 
-const Fab = ({ hidden = false, onClick }) => {
+const Fab = ({ onClick }) => {
   const size = useContext(ResponsiveContext);
   const [hovered, setHovered] = useState(false);
 
-  return !hidden ? (
+  return (
     <Box
       style={fabStyle(size, hovered)}
       onClick={onClick}
@@ -35,8 +36,6 @@ const Fab = ({ hidden = false, onClick }) => {
     >
       <Terminal color={hovered ? "white" : "black"} />
     </Box>
-  ) : (
-    <div />
   );
 };
 
