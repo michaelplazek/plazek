@@ -9,7 +9,7 @@ import { isSmall } from "../utils";
 import TerminalWrapper from "../components/TerminalWrapper";
 import Seo from "../components/Seo";
 
-const title = "Front End"
+const title = "Front End";
 
 const AppearTransition = posed.div({
   visible: { opacity: 1, transition: { duration: 1000 } },

@@ -6,7 +6,7 @@ const rootStyle = size => ({
   position: "fixed",
   bottom: size !== "small" ? "3em" : "1.5em",
   right: size !== "small" ? "3em" : "1.5em",
-  zIndex: 1000
+  zIndex: 1000,
 });
 
 const fabStyle = (size, hovered) => ({
