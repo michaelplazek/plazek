@@ -1,4 +1,4 @@
-export const aboutMe =`
+export const aboutMe = `
   Hello, Anonymous Viewer. First off, let me welcome you to my site. It ain't much - but when you spend every day
   spilling your lifeblood into the machinations of your corporate overlords, it becomes difficult to summon the energy
   required to make that Whole Foods pie sitting in your freezer for dinner, let alone maintain a series of side projects.
@@ -21,5 +21,4 @@ export const aboutMe =`
   a micro-frontend-based architecture at HPE... Outside of my indentured servitude, I can be found slogging through 40-50 mile stretches of trail
   in the Rocky Mountains, greedily turning the pages of whatever book I'm reading, heaving plates at the gym, skimming through documentation,
   ordering a fourth round, staring blankly at my phone, or listening to old episodes of Norm MacDonald Live.
-  `
-
+  `;

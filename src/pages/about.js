@@ -62,7 +62,9 @@ const About = () => {
           align="center"
         >
           <Box pad={{ vertical: "small" }} basis="3/4">
-            <Markdown components={{ p: (props) => <Paragraph {...props} fill/> }}>
+            <Markdown
+              components={{ p: props => <Paragraph {...props} fill /> }}
+            >
               {aboutMe}
             </Markdown>
             <Box
@@ -158,7 +160,7 @@ const About = () => {
       </Grid>
       <Box
         background="light-1"
-        margin={{ top: "large", bottom: 'medium' }}
+        margin={{ top: "large", bottom: "medium" }}
         pad="medium"
         round={true}
       >

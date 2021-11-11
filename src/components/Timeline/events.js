@@ -73,11 +73,7 @@ export default [
     title: "Front End Software Engineer I",
     subtitle: "Hewlett Packard Enterprise",
     location: locations.COLORADO,
-    tags: [
-      tags.FRONT_END,
-      tags.BACK_END,
-      tags.USER_EXPERIENCE,
-    ],
+    tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE],
     icon: iconMap[eventTypes.WORK],
   },
   {
