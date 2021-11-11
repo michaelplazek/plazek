@@ -59,6 +59,10 @@ export const use = [
     icon: JsIcon
   },
   {
+    name: 'TypeScript',
+    icon: TypescriptIcon
+  },
+  {
     name: 'Grommet',
     icon: GrommetIcon
   },
@@ -151,10 +155,6 @@ export const play = [
   {
     name: 'Vue',
     icon: VueIcon
-  },
-  {
-    name: 'TypeScript',
-    icon: TypescriptIcon
   },
   {
     name: 'Unity',
