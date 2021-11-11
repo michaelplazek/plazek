@@ -9,6 +9,8 @@ import { isSmall } from "../utils";
 import TerminalWrapper from "../components/TerminalWrapper";
 import Seo from "../components/Seo";
 
+const title = "Front End"
+
 const AppearTransition = posed.div({
   visible: { opacity: 1, transition: { duration: 1000 } },
   hidden: { opacity: 0, transition: { duration: 1000 } },
@@ -23,8 +25,6 @@ const Home = () => {
       <Seo title="Home" />
       <Box fill="vertical" style={INVERSE} align="center" justify="center">
         <Box
-          // fill='vertical'
-          // justify='center'
           align="center"
           style={hasTerminal ? { position: "relative", bottom: "20vh" } : {}}
           direction={!isSmall(size) ? "row" : "column"}
@@ -33,17 +33,17 @@ const Home = () => {
           <Box>
             <AppearTransition pose={!hasTerminal ? "visible" : "hidden"}>
               <Heading margin="none" size="xlarge">
-                UI / UX
+                {title}
               </Heading>
             </AppearTransition>
             {((size === "small" && !hasTerminal) || size !== "small") && (
               <Heading margin="none" size="xlarge">
-                UI / UX
+                {title}
               </Heading>
             )}
             <AppearTransition pose={!hasTerminal ? "visible" : "hidden"}>
               <Heading margin="none" size="xlarge">
-                UI / UX
+                {title}
               </Heading>
             </AppearTransition>
           </Box>
@@ -84,7 +84,7 @@ const Home = () => {
               align="center"
             >
               <Heading color="black" margin="none" size="large">
-                UI / UX
+                {title}
               </Heading>
             </Box>
           )}
