@@ -11,7 +11,7 @@ const Template = ({ data }) => {
 
   return (
     <PageContainer title={frontmatter.title}>
-      <Box>
+      <Box alignSelf='center' width="900px">
         <Box
           direction="row"
           align="center"
