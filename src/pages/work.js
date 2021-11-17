@@ -98,7 +98,7 @@ const displayRepos = [
     symbol: "GRA",
     type: "repo",
     order: 6,
-    description: "Little app to display the commit for a given repo in a feed.",
+    description: "Little app to display the GitHub repos owned by a user.",
   },
 ];
 
