@@ -86,6 +86,14 @@ const displayRepos = [
       "Code for this website! Built using Gatsby and deployed using Netlify.",
   },
   {
+    name: "agnostic-events",
+    symbol: "AE",
+    type: "npm",
+    order: 7,
+    description:
+      "Framework agnostic event bus for things like prefetching in micro-frontends.",
+  },
+  {
     name: "on-track",
     symbol: "OT",
     type: "repo",
@@ -134,7 +142,7 @@ const Work = () => {
     query GitHubQuery {
       github {
         viewer {
-          repositories(last: 20, affiliations: OWNER) {
+          repositories(last: 50, affiliations: OWNER) {
             edges {
               node {
                 id
