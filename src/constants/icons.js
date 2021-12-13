@@ -32,6 +32,7 @@ import {
 } from "react-icons/fa";
 import { GrGrommet as GrommetIcon } from "react-icons/gr";
 import { FiFigma as FigmaIcon } from "react-icons/fi";
+import { SiSvelte as SvelteIcon } from "react-icons/si";
 
 export const use = [
   {
@@ -83,8 +84,8 @@ export const use = [
     icon: TerraformIcon,
   },
   {
-    name: "Serverless",
-    icon: LambdaIcon,
+    name: "Svelte",
+    icon: SvelteIcon,
   },
   {
     name: "Netlify",
@@ -128,6 +129,10 @@ export const know = [
   {
     name: "Redux",
     icon: ReduxIcon,
+  },
+  {
+    name: "Serverless",
+    icon: LambdaIcon,
   },
 ];
 

@@ -57,7 +57,7 @@ const displayRepos = [
     symbol: "PP",
     site: "https://www.plazekproperties.com",
     type: "site",
-    order: 3,
+    order: 9,
     description:
       "Real estate site built for Plazek Properties. Quickly search for available units and view pictures of properties.",
   },
@@ -74,7 +74,7 @@ const displayRepos = [
     name: "SNAKE",
     symbol: "S",
     type: "repo",
-    order: 6,
+    order: 8,
     description: "Classic Snake game built in MIPS Assembly language.",
   },
   {
@@ -107,6 +107,13 @@ const displayRepos = [
     type: "repo",
     order: 6,
     description: "Little app to display the GitHub repos owned by a user.",
+  },
+  {
+    name: "mars-weather",
+    symbol: "MWA",
+    type: "repo",
+    order: 3,
+    description: "Dashboard to view the weather on Mars, via an open NASA API.",
   },
 ];
 
