@@ -9,17 +9,17 @@ const eventTypes = {
 };
 
 const colorTypes = {
-  HPE_GREEN: '#1ab288',
-  UBER_BLACK: '#000000',
-  PITT_BLUE: '#004e9c',
-  CCAC_RED: '#b82e36',
-  PLAZEK_BLUE: '#016896'
-}
+  HPE_GREEN: "#1ab288",
+  UBER_BLACK: "#000000",
+  PITT_BLUE: "#004e9c",
+  CCAC_RED: "#b82e36",
+  PLAZEK_BLUE: "#016896",
+};
 
 const locations = {
   PITTSBURGH: "Pittsburgh, PA",
   FOCO: "Fort Collins, CO",
-  BOULDER: "Boulder, CO"
+  BOULDER: "Boulder, CO",
 };
 
 const tags = {
@@ -30,7 +30,7 @@ const tags = {
   USER_EXPERIENCE: "User Experience",
   DESIGN: "Visual Design",
   LEADERSHIP: "Team Leading",
-  PRODUCT: "Product"
+  PRODUCT: "Product",
 };
 
 const iconMap = {
@@ -46,14 +46,9 @@ export default [
     title: "Front End Software Engineer",
     subtitle: "Uber",
     location: locations.BOULDER,
-    tags: [
-      tags.FRONT_END,
-      tags.ENGINEERING,
-      tags.DESIGN,
-      tags.PRODUCT
-    ],
+    tags: [tags.FRONT_END, tags.ENGINEERING, tags.DESIGN, tags.PRODUCT],
     icon: iconMap[eventTypes.WORK],
-    color: colorTypes.UBER_BLACK
+    color: colorTypes.UBER_BLACK,
   },
   {
     type: eventTypes.WORK,
@@ -68,7 +63,7 @@ export default [
       tags.LEADERSHIP,
     ],
     icon: iconMap[eventTypes.WORK],
-    color: colorTypes.HPE_GREEN
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
@@ -83,7 +78,7 @@ export default [
       tags.LEADERSHIP,
     ],
     icon: iconMap[eventTypes.WORK],
-    color: colorTypes.HPE_GREEN
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
@@ -93,7 +88,7 @@ export default [
     location: locations.FOCO,
     tags: [tags.FRONT_END, tags.USER_EXPERIENCE, tags.DESIGN],
     icon: iconMap[eventTypes.WORK],
-    color: colorTypes.HPE_GREEN
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
@@ -103,7 +98,7 @@ export default [
     location: locations.FOCO,
     tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE],
     icon: iconMap[eventTypes.WORK],
-    color: colorTypes.HPE_GREEN
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.SCHOOL,
@@ -113,7 +108,7 @@ export default [
     location: locations.PITTSBURGH,
     tags: [tags.ENGINEERING, tags.LEADERSHIP],
     icon: iconMap[eventTypes.SCHOOL],
-    color: colorTypes.PITT_BLUE
+    color: colorTypes.PITT_BLUE,
   },
   {
     type: eventTypes.WORK,
@@ -123,7 +118,7 @@ export default [
     location: locations.FOCO,
     tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE, tags.DESIGN],
     icon: iconMap[eventTypes.WORK],
-    color: colorTypes.HPE_GREEN
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
@@ -133,7 +128,7 @@ export default [
     location: locations.PITTSBURGH,
     tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE, tags.DESIGN],
     icon: iconMap[eventTypes.WORK],
-    color: colorTypes.PLAZEK_BLUE
+    color: colorTypes.PLAZEK_BLUE,
   },
   {
     type: eventTypes.SCHOOL,
@@ -143,6 +138,6 @@ export default [
     location: locations.PITTSBURGH,
     tags: [tags.ENGINEERING],
     icon: iconMap[eventTypes.SCHOOL],
-    color: colorTypes.CCAC_RED
+    color: colorTypes.CCAC_RED,
   },
 ];
