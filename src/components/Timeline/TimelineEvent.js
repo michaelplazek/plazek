@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import uniqueId from "lodash/uniqueId";
 
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
-import { Box, Heading, Text } from "grommet";
+import { Box, Heading, Text, ResponsiveContext } from "grommet";
+import { isSmall } from '../../utils'
 
 const TimelineEvent = ({
   type,
@@ -12,17 +13,20 @@ const TimelineEvent = ({
   location,
   tags,
   icon,
+  color
 }) => {
+  const size = useContext(ResponsiveContext);
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
-      contentStyle={{ background: "#2194f3", color: "#fff", border: "0px" }}
-      contentArrowStyle={{ borderRight: "7px solid #2194f3" }}
+      contentStyle={{ background: '#fff', color: "black", border: "0px" }}
+      contentArrowStyle={{ borderRight: `7px solid #fff` }}
       date={<Text>{date}</Text>}
-      iconStyle={{ background: "#2194f3", color: "white" }}
+      iconStyle={{ background: '#fff', color: "black" }}
       icon={React.createElement(icon)}
       animate={true}
     >
+      <Box margin='medium'>
       <Box margin={{ bottom: "medium" }}>
         <Heading margin="none" level={3}>
           {title}
@@ -36,7 +40,7 @@ const TimelineEvent = ({
         {tags.map(item => (
           <Box
             key={uniqueId()}
-            background="white"
+            background="light-1"
             round={true}
             pad={{ vertical: "xsmall", horizontal: "small" }}
             margin="xsmall"
@@ -47,6 +51,8 @@ const TimelineEvent = ({
           </Box>
         ))}
       </Box>
+      </Box>
+      {size !== 'small' && size !== 'medium-small' && <Box height='10px' background={color} round={{ corner: 'bottom', size: '0.25em' }} />}
     </VerticalTimelineElement>
   );
 };

@@ -93,7 +93,9 @@ pre {
 @media only screen and (min-width: 900px) {
     .vertical-timeline--two-columns .vertical-timeline-element-content {
         margin-left: 0;
-        padding: 1.5em;
+        padding-top: 1.5em;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         width: 44%;
     }
     .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
@@ -130,4 +132,11 @@ pre {
         right: 124%;
         text-align: right;
     }
+}
+
+.vertical-timeline-element-content {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 0 !important;
 }
