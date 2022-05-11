@@ -9,6 +9,7 @@ import KubernetesIcon from "../svgs/icons/Kubernetes";
 import FramerIcon from "../svgs/icons/Framer";
 import TypescriptIcon from "../svgs/icons/Typescript";
 import MaterialUiIcon from "../svgs/icons/MaterialUI";
+import FlowIcon from "../svgs/icons/Flow";
 
 import {
   DiReact as ReactIcon,
@@ -46,10 +47,6 @@ export const use = [
   {
     name: "JavaScript",
     icon: JsIcon,
-  },
-  {
-    name: "TypeScript",
-    icon: TypescriptIcon,
   },
   {
     name: "Grommet",
@@ -91,6 +88,10 @@ export const use = [
     name: "Netlify",
     icon: NetlifyIcon,
   },
+  {
+    name: "Flow",
+    icon: FlowIcon,
+  },
 ];
 
 export const know = [
@@ -113,6 +114,10 @@ export const know = [
   {
     name: "Figma",
     icon: FigmaIcon,
+  },
+  {
+    name: "TypeScript",
+    icon: TypescriptIcon,
   },
   {
     name: "JQuery",

@@ -8,9 +8,18 @@ const eventTypes = {
   PROJECT: "course",
 };
 
+const colorTypes = {
+  HPE_GREEN: "#1ab288",
+  UBER_BLACK: "#000000",
+  PITT_BLUE: "#004e9c",
+  CCAC_RED: "#b82e36",
+  PLAZEK_BLUE: "#016896",
+};
+
 const locations = {
   PITTSBURGH: "Pittsburgh, PA",
-  COLORADO: "Fort Collins, CO",
+  FOCO: "Fort Collins, CO",
+  BOULDER: "Boulder, CO",
 };
 
 const tags = {
@@ -21,6 +30,7 @@ const tags = {
   USER_EXPERIENCE: "User Experience",
   DESIGN: "Visual Design",
   LEADERSHIP: "Team Leading",
+  PRODUCT: "Product",
 };
 
 const iconMap = {
@@ -32,10 +42,20 @@ const iconMap = {
 export default [
   {
     type: eventTypes.WORK,
-    date: "2021 - Present",
+    date: "2022 - Present",
+    title: "Front End Software Engineer",
+    subtitle: "Uber",
+    location: locations.BOULDER,
+    tags: [tags.FRONT_END, tags.ENGINEERING, tags.DESIGN, tags.PRODUCT],
+    icon: iconMap[eventTypes.WORK],
+    color: colorTypes.UBER_BLACK,
+  },
+  {
+    type: eventTypes.WORK,
+    date: "2021 - 2022",
     title: "Technical Lead",
     subtitle: "Hewlett Packard Enterprise",
-    location: locations.COLORADO,
+    location: locations.FOCO,
     tags: [
       tags.FRONT_END,
       tags.ARCHITECTURE,
@@ -43,13 +63,14 @@ export default [
       tags.LEADERSHIP,
     ],
     icon: iconMap[eventTypes.WORK],
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
     date: "2020 - 2021",
     title: "Senior Front End Engineer",
     subtitle: "Hewlett Packard Enterprise",
-    location: locations.COLORADO,
+    location: locations.FOCO,
     tags: [
       tags.FRONT_END,
       tags.ARCHITECTURE,
@@ -57,24 +78,27 @@ export default [
       tags.LEADERSHIP,
     ],
     icon: iconMap[eventTypes.WORK],
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
     date: "2020",
     title: "Front End Software Engineer II",
     subtitle: "Hewlett Packard Enterprise",
-    location: locations.COLORADO,
+    location: locations.FOCO,
     tags: [tags.FRONT_END, tags.USER_EXPERIENCE, tags.DESIGN],
     icon: iconMap[eventTypes.WORK],
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
     date: "2018 - 2020",
     title: "Front End Software Engineer I",
     subtitle: "Hewlett Packard Enterprise",
-    location: locations.COLORADO,
+    location: locations.FOCO,
     tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE],
     icon: iconMap[eventTypes.WORK],
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.SCHOOL,
@@ -84,15 +108,17 @@ export default [
     location: locations.PITTSBURGH,
     tags: [tags.ENGINEERING, tags.LEADERSHIP],
     icon: iconMap[eventTypes.SCHOOL],
+    color: colorTypes.PITT_BLUE,
   },
   {
     type: eventTypes.WORK,
     date: "2017 - 2018",
     title: "User Interface Intern",
     subtitle: "Hewlett Packard Enterprise",
-    location: locations.COLORADO,
+    location: locations.FOCO,
     tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE, tags.DESIGN],
     icon: iconMap[eventTypes.WORK],
+    color: colorTypes.HPE_GREEN,
   },
   {
     type: eventTypes.WORK,
@@ -102,6 +128,7 @@ export default [
     location: locations.PITTSBURGH,
     tags: [tags.FRONT_END, tags.BACK_END, tags.USER_EXPERIENCE, tags.DESIGN],
     icon: iconMap[eventTypes.WORK],
+    color: colorTypes.PLAZEK_BLUE,
   },
   {
     type: eventTypes.SCHOOL,
@@ -111,5 +138,6 @@ export default [
     location: locations.PITTSBURGH,
     tags: [tags.ENGINEERING],
     icon: iconMap[eventTypes.SCHOOL],
+    color: colorTypes.CCAC_RED,
   },
 ];
