@@ -19,7 +19,7 @@
     "gatsby-remark-images": "^3.3.18",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-source-graphql": "^2.5.4",
-    "gatsby-transformer-remark": "^2.8.15",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.11",
     "grommet": "^2.13.0",
     "grommet-icons": "^4.4.0",
